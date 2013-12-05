@@ -23,7 +23,22 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-@TemplateRegistration(folder = "Other", content = "DRLTemplate.drl")
-package com.afqa123.drools;
+package com.afqa123.drools.lexer;
 
-import org.netbeans.api.templates.TemplateRegistration;
+import org.netbeans.api.lexer.Language;
+import org.netbeans.modules.csl.spi.DefaultLanguageConfig;
+import org.netbeans.modules.csl.spi.LanguageRegistration;
+
+@LanguageRegistration(mimeType="text/x-drools-rule")
+public class DRLLanguage extends DefaultLanguageConfig {
+
+    @Override
+    public Language getLexerLanguage() {
+        return DRLTokenId.getLanguage();
+    }
+
+    @Override
+    public String getDisplayName() {
+        return "DRL";
+    }
+}

@@ -1,25 +1,31 @@
-/**
- * Copyright (c) 2013 Benjamin Damer
+/*
+ * Copyright (c) 2013, Benjamin Damer
+ * All rights reserved.
  *
- * Permission is hereby granted, free of charge, to any person obtaining a copy of this software 
- * and associated documentation files (the "Software"), to deal in the Software without restriction, 
- * including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, 
- * and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, 
- * subject to the following conditions:
+ * Redistribution and use in source and binary forms, with or without
+ * modification, are permitted provided that the following conditions are met:
  *
- * The above copyright notice and this permission notice shall be included in all copies or substantial 
- * portions of the Software.
+ * * Redistributions of source code must retain the above copyright notice, this
+ *   list of conditions and the following disclaimer.
+ * * Redistributions in binary form must reproduce the above copyright notice,
+ *   this list of conditions and the following disclaimer in the documentation
+ *   and/or other materials provided with the distribution.
  *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT 
- * NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. 
- * IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, 
- * WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE 
- * SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS"
+ * AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE
+ * IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE
+ * ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE
+ * LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, EXEMPLARY, OR
+ * CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT OF
+ * SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS
+ * INTERRUPTION) HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN
+ * CONTRACT, STRICT LIABILITY, OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE)
+ * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
+ * POSSIBILITY OF SUCH DAMAGE.
  */
 grammar DroolsRule;
 
-options
-{
+options {
 	output=AST;
 	backtrack=true;
 	memoize=true;
@@ -34,36 +40,129 @@ package com.afqa123.drools.grammar;
 }
 
 program
-	:	statement* WS*
+	:	declaration* WS*
 	;
 	
-statement
-	:	WS*
-	(KEYWORD | SEPARATOR | OPERATOR | BINDING | ID)
+declaration
+	:	WS!*
+		( packageDeclaration | importDeclaration | globalDeclaration | dialectDeclaration | typeDeclaration | ruleDeclaration )
+		WS!* SEMICOLON?
+	;
+
+packageDeclaration
+	:	 PACKAGE WS!+ FQN 
 	;
 	
-KEYWORD
-	:	'declare' | 'extends' | 'dialect' | 'end' | 'global' | 'import' | 'package' | 'rule' | 'then' | 'when' | 
-		'and' | 'or' | 'not' | 'matches' | 'contains' |
-		// Java keywords
-		'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' | 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char'
+dialectDeclaration
+	:	DIALECT WS!+ STRING
+	;
+	
+importDeclaration
+	:	IMPORT WS!+ FQN
+	;
+	
+globalDeclaration
+	:	GLOBAL WS+ FQN WS+ ID
+	-> GLOBAL FQN ID
+	;
+	
+typeDeclaration
+	:	DECLARE WS!+ ID WS!+ (EXTENDS FQN)? (WS* memberDeclaration)* WS+ END
+	;
+	
+memberDeclaration
+	:	ID WS!* COLON WS!* (PRIMITIVE | FQN)
+	;
+
+ruleDeclaration
+	:	RULE WS!+ (STRING WS!+)? WHEN WS!+ ruleLHS THEN WS!+ ruleRHS END 
+	; 
+	
+ruleLHS
+	:	
+	;
+	
+ruleRHS
+	:
+	;
+	
+DECLARE
+	:	'declare'
+	;
+
+DIALECT
+	:	'dialect'
+	;
+
+END
+	: 	'end'
+	;
+
+EXTENDS
+	:	'extends'
+	;
+	
+GLOBAL
+	:	'global'
+	;
+
+IMPORT
+	:	'import'
+	;
+
+PACKAGE
+	: 	'package'
+	;
+
+RULE
+	:	'rule'
+	;
+
+THEN
+	:	'then'
+	;
+
+WHEN
+	:	'when'
+	;
+	
+PRIMITIVE
+	:	'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char'
 	;	
 	
-SEPARATOR
-	:	';' | '.'| '(' | ')' | '[' | ']' | ','
+KEYWORD
+	:	'and' | 'or' | 'not' | 'matches' | 'contains' |
+		DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE |
+		// Java keywords
+		'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for'
+	;
+
+SEMICOLON
+	:	';'
 	;
 	
+COLON
+	:	':'
+	;
+
+SEPARATOR
+	:	'.'| '(' | ')' | '[' | ']' | ',' | COLON | SEMICOLON
+	;
+		
 OPERATOR
 	:	'==' | '!=' | '>' | '<' | '>=' | '<=' | '+' | '-' | '/' | '*' | '%' | '|' | '&' | '||' | '&&' | '!' | ':' | '='
 	;
 	
+ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
+    ;	
+
 BINDING
 	:	'$' ID
 	;
 	
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
-    ;
-    
+FQN	:	ID ('.' ID)*
+	;
+        
 INT :	'0'..'9'+
     ;
 
@@ -72,11 +171,14 @@ FLOAT
     |   '.' ('0'..'9')+ EXPONENT?
     |   ('0'..'9')+ EXPONENT
     ;
-
-COMMENT
-    :   '//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
-    |   '/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
-    ;
+    
+SINGLELINE_COMMENT
+	:	'//' ~('\n'|'\r')* '\r'? '\n' {$channel=HIDDEN;}
+	;
+    
+MULTILINE_COMMENT
+	:	'/*' ( options {greedy=false;} : . )* '*/' {$channel=HIDDEN;}
+	;
 
 WS  :   ( ' '
         | '\t'

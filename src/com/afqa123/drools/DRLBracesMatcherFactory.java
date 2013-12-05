@@ -23,7 +23,19 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-@TemplateRegistration(folder = "Other", content = "DRLTemplate.drl")
 package com.afqa123.drools;
 
-import org.netbeans.api.templates.TemplateRegistration;
+import org.netbeans.api.editor.mimelookup.MimeRegistration;
+import org.netbeans.spi.editor.bracesmatching.BracesMatcher;
+import org.netbeans.spi.editor.bracesmatching.BracesMatcherFactory;
+import org.netbeans.spi.editor.bracesmatching.MatcherContext;
+import org.netbeans.spi.editor.bracesmatching.support.BracesMatcherSupport;
+
+@MimeRegistration(mimeType="text/x-drools-rule",service=BracesMatcherFactory.class)
+public class DRLBracesMatcherFactory implements BracesMatcherFactory {
+
+    @Override
+    public BracesMatcher createMatcher(MatcherContext mc) {
+        return BracesMatcherSupport.defaultMatcher(mc, -1, -1);
+    }
+}

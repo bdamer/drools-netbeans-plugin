@@ -14,11 +14,13 @@
                     </folder>
                 </folder>
             </folder>
+<!--
             <file name="org-netbeans-modules-editor-NbEditorKit.instance"/>
             <file name="language.instance">
                 <attr name="instanceCreate" methodvalue="com.afqa123.drools.lexer.DRLTokenId.getLanguage"/>
                 <attr name="instanceOf" stringvalue="org.netbeans.api.lexer.Language"/>
            </file>
+-->
        </folder>
    </folder>
 </folder>   
