@@ -23,7 +23,8 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-@TemplateRegistration(folder = "Other", content = "DRLTemplate.drl")
+@TemplateRegistration(folder="Other",content="DRLTemplate.drl",displayName="DRL file",
+        description="Description.html",scriptEngine="freemarker")
 package com.afqa123.drools;
 
 import org.netbeans.api.templates.TemplateRegistration;

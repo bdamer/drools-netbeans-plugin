@@ -1,21 +1,21 @@
-/**
- * A sample Drools Rule file.
- */
-package com.test;
+<#assign licenseFirst = "/*">
+<#assign licensePrefix = " * ">
+<#assign licenseLast = " */">
+<#include "../Licenses/license-${project.license}.txt">
+
+<#if package?? && package != "">
+package ${package};
+
+</#if>
 dialect "mvel"
 
-import com.test.SomeClass;
-global com.test.SomeGlobal const1; 
-
-declare MyType extends SomeClass
-    id : String
-    name : String
-end
-
-// A simple rule
-rule "A Rule"
+/**
+ *
+ * @author ${user}
+ */
+rule "Rule"
 when
-    $t : MyType( id == "id" )
+
 then
 
 end

@@ -1,0 +1,21 @@
+/**
+ * A sample Drools Rule file.
+ */
+package com.test;
+dialect "mvel"
+
+import com.test.SomeClass;
+global com.test.SomeGlobal const1; 
+
+declare MyType extends SomeClass
+    id : String
+    name : String
+end
+
+// A simple rule
+rule "A Rule"
+when
+    $t : MyType( id == "id" )
+then
+    System.out.println($t);
+end
