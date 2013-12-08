@@ -35,6 +35,18 @@ options {
 package com.afqa123.drools.grammar;
 }
 
+@lexer::members {
+	@Override
+	public void emitErrorMessage(String msg) {
+	}	
+}
+
+@members {
+	@Override
+	public void emitErrorMessage(String msg) {
+	}
+}
+
 @header {
 package com.afqa123.drools.grammar;
 }

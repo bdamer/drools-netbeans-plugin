@@ -23,17 +23,18 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-
 package com.afqa123.drools;
 
 import com.afqa123.drools.grammar.DroolsRuleLexer;
 import com.afqa123.drools.lexer.DRLTokenId;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
 import javax.swing.event.DocumentEvent;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
 import org.netbeans.api.editor.fold.Fold;
 import org.netbeans.api.editor.fold.FoldHierarchy;
-import org.netbeans.api.editor.fold.FoldTemplate;
 import org.netbeans.api.editor.fold.FoldType;
 import org.netbeans.api.editor.mimelookup.MimeRegistration;
 import org.netbeans.api.lexer.Token;
@@ -46,17 +47,17 @@ import org.netbeans.spi.editor.fold.FoldOperation;
 import org.openide.util.Exceptions;
 
 public class DRLFoldManager implements FoldManager {
-    
-    @MimeRegistration(mimeType="text/x-drools-rule",service=FoldManagerFactory.class)
+
+    @MimeRegistration(mimeType = "text/x-drools-rule", service = FoldManagerFactory.class)
     public static class DRLFoldManagerFactory implements FoldManagerFactory {
         @Override
         public FoldManager createFoldManager() {
             return new DRLFoldManager();
         }
     }
-    
-    private FoldOperation operation;
 
+    private FoldOperation operation;
+    
     @Override
     public void init(FoldOperation operation) {
         this.operation = operation;
@@ -64,6 +65,11 @@ public class DRLFoldManager implements FoldManager {
 
     @Override
     public void initFolds(FoldHierarchyTransaction transaction) {
+        updateFolds(transaction);
+    }
+
+    private void updateFolds(FoldHierarchyTransaction fht) {
+        removeAllFolds(fht);
         FoldHierarchy hierarchy = operation.getHierarchy();
         Document document = hierarchy.getComponent().getDocument();
         TokenHierarchy<Document> hi = TokenHierarchy.get(document);
@@ -71,15 +77,13 @@ public class DRLFoldManager implements FoldManager {
         while (ts.moveNext()) {
             int offset = ts.offset();
             Token<DRLTokenId> token = ts.token();
-            DRLTokenId id = token.id();   
+            DRLTokenId id = token.id();
             try {
                 switch (id.ordinal()) {
                     case DroolsRuleLexer.MULTILINE_COMMENT:
-                        operation.addToHierarchy(FoldType.COMMENT, offset, offset + token.length(), 
-                                false, null, null, hierarchy, transaction);
+                        addFold(FoldType.COMMENT, offset, offset + token.length(), fht);
                         break;
-                    case DroolsRuleLexer.SINGLELINE_COMMENT:
-                    {
+                    case DroolsRuleLexer.SINGLELINE_COMMENT: {
                         int start = offset;
                         int stop = -1;
                         while (ts.moveNext()) {
@@ -92,13 +96,11 @@ public class DRLFoldManager implements FoldManager {
                             }
                         }
                         if (stop > -1) {
-                            operation.addToHierarchy(FoldType.COMMENT, start, stop, 
-                                false, null, null, hierarchy, transaction);
+                            addFold(FoldType.COMMENT, start, stop, fht);
                         }
                         break;
                     }
-                    case DroolsRuleLexer.RULE:
-                    {
+                    case DroolsRuleLexer.RULE: {
                         int start = offset + token.length();
                         skipWhitespace(ts);
                         token = ts.token();
@@ -115,18 +117,16 @@ public class DRLFoldManager implements FoldManager {
                             }
                         }
                         if (stop > -1) {
-                            operation.addToHierarchy(FoldType.CODE_BLOCK, start, stop, 
-                                false, null, null, hierarchy, transaction);
+                            addFold(FoldType.COMMENT, start, stop, fht);
                         }
                         break;
                     }
-                    case DroolsRuleLexer.DECLARE:
-                    {
+                    case DroolsRuleLexer.DECLARE: {
                         int start = offset + token.length();
                         skipWhitespace(ts);
                         token = ts.token();
-                        if (token.id().ordinal() == DroolsRuleLexer.FQN || 
-                                token.id().ordinal() == DroolsRuleLexer.ID) {
+                        if (token.id().ordinal() == DroolsRuleLexer.FQN
+                                || token.id().ordinal() == DroolsRuleLexer.ID) {
                             start = ts.offset() + token.length();
                         }
                         int stop = -1;
@@ -139,8 +139,7 @@ public class DRLFoldManager implements FoldManager {
                             }
                         }
                         if (stop > -1) {
-                            operation.addToHierarchy(FoldType.CODE_BLOCK, start, stop, 
-                                false, null, null, hierarchy, transaction);
+                            addFold(FoldType.CODE_BLOCK, start, stop, fht);
                         }
                         break;
                     }
@@ -151,43 +150,71 @@ public class DRLFoldManager implements FoldManager {
         }
     }
     
-    private void skipWhitespace(TokenSequence<DRLTokenId> ts) {
-        while (ts.moveNext() && ts.token().id().ordinal() == DroolsRuleLexer.WS) { 
+    private void removeAllFolds(FoldHierarchyTransaction fht) {
+        // need to collect first, since removeFromHierarchy changes 
+        // the underlying collection
+        Iterator<Fold> it = operation.foldIterator();
+        List<Fold> folds = new ArrayList<Fold>();
+        while (it.hasNext()) {
+            folds.add(it.next());
+        }
+        for (Fold f : folds) {
+            operation.removeFromHierarchy(f, fht);
         }
     }
     
+    private void addFold(FoldType type, int start, int stop, FoldHierarchyTransaction fht) 
+            throws BadLocationException {
+        // Not needed, since we currently remove all folds
+        /*Iterator<Fold> it = operation.foldIterator();
+        while (it.hasNext()) {
+            Fold f = it.next();
+            // don't replace existing folds unless they've changed
+            if (f.getStartOffset() == start && f.getEndOffset() == stop &&
+                    f.getType() == type) {
+                return;
+            }
+            // remove if old fold was changed
+            if (f.getStartOffset() >= start && f.getStartOffset() <= stop) {
+                operation.removeFromHierarchy(f, fht);
+            }
+        }*/   
+        operation.addToHierarchy(type, start, stop, false, null, null, operation.getHierarchy(), fht);
+    }
+     
+    private void skipWhitespace(TokenSequence<DRLTokenId> ts) {
+        while (ts.moveNext() && ts.token().id().ordinal() == DroolsRuleLexer.WS) {
+        }
+    }
+
     @Override
     public void insertUpdate(DocumentEvent de, FoldHierarchyTransaction fht) {
-        
+        updateFolds(fht);
     }
-    
+
     @Override
     public void removeUpdate(DocumentEvent de, FoldHierarchyTransaction fht) {
-        
+        updateFolds(fht);
     }
 
     @Override
     public void changedUpdate(DocumentEvent de, FoldHierarchyTransaction fht) {
-        
+        // nothing to do, as updated are caught by insert and remove
     }
 
     @Override
     public void removeEmptyNotify(Fold fold) {
-        
     }
 
     @Override
     public void removeDamagedNotify(Fold fold) {
-        
     }
 
     @Override
     public void expandNotify(Fold fold) {
-        
     }
 
     @Override
     public void release() {
-        
     }
 }

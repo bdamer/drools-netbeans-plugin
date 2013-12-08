@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g 2013-12-04 17:18:07
+// $ANTLR 3.5.1 C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g 2013-12-07 19:01:43
 
 package com.afqa123.drools.grammar;
 
@@ -43,6 +43,11 @@ public class DroolsRuleLexer extends Lexer {
 	public static final int WHEN=33;
 	public static final int WS=34;
 
+		@Override
+		public void emitErrorMessage(String msg) {
+		}	
+
+
 	// delegates
 	// delegators
 	public Lexer[] getDelegates() {
@@ -63,8 +68,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = DECLARE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:90:2: ( 'declare' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:90:4: 'declare'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:102:2: ( 'declare' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:102:4: 'declare'
 			{
 			match("declare"); 
 
@@ -84,8 +89,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = DIALECT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:94:2: ( 'dialect' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:94:4: 'dialect'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:106:2: ( 'dialect' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:106:4: 'dialect'
 			{
 			match("dialect"); 
 
@@ -105,8 +110,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = END;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:98:2: ( 'end' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:98:5: 'end'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:110:2: ( 'end' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:110:5: 'end'
 			{
 			match("end"); 
 
@@ -126,8 +131,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = EXTENDS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:102:2: ( 'extends' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:102:4: 'extends'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:114:2: ( 'extends' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:114:4: 'extends'
 			{
 			match("extends"); 
 
@@ -147,8 +152,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = GLOBAL;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:106:2: ( 'global' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:106:4: 'global'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:118:2: ( 'global' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:118:4: 'global'
 			{
 			match("global"); 
 
@@ -168,8 +173,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = IMPORT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:110:2: ( 'import' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:110:4: 'import'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:122:2: ( 'import' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:122:4: 'import'
 			{
 			match("import"); 
 
@@ -189,8 +194,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = PACKAGE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:114:2: ( 'package' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:114:5: 'package'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:126:2: ( 'package' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:126:5: 'package'
 			{
 			match("package"); 
 
@@ -210,8 +215,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = RULE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:118:2: ( 'rule' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:118:4: 'rule'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:2: ( 'rule' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:4: 'rule'
 			{
 			match("rule"); 
 
@@ -231,8 +236,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = THEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:122:2: ( 'then' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:122:4: 'then'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:2: ( 'then' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:4: 'then'
 			{
 			match("then"); 
 
@@ -252,8 +257,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = WHEN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:126:2: ( 'when' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:126:4: 'when'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:138:2: ( 'when' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:138:4: 'when'
 			{
 			match("when"); 
 
@@ -273,7 +278,7 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = PRIMITIVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:2: ( 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:2: ( 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char' )
 			int alt1=8;
 			switch ( input.LA(1) ) {
 			case 'b':
@@ -337,56 +342,56 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:4: 'byte'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:4: 'byte'
 					{
 					match("byte"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:13: 'short'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:13: 'short'
 					{
 					match("short"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:23: 'int'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:23: 'int'
 					{
 					match("int"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:31: 'long'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:31: 'long'
 					{
 					match("long"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:40: 'float'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:40: 'float'
 					{
 					match("float"); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:50: 'double'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:50: 'double'
 					{
 					match("double"); 
 
 					}
 					break;
 				case 7 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:61: 'boolean'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:61: 'boolean'
 					{
 					match("boolean"); 
 
 					}
 					break;
 				case 8 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:130:73: 'char'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:73: 'char'
 					{
 					match("char"); 
 
@@ -408,7 +413,7 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = KEYWORD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:2: ( 'and' | 'or' | 'not' | 'matches' | 'contains' | DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | 'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:2: ( 'and' | 'or' | 'not' | 'matches' | 'contains' | DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | 'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' )
 			int alt2=23;
 			switch ( input.LA(1) ) {
 			case 'a':
@@ -694,161 +699,161 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt2) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:4: 'and'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:4: 'and'
 					{
 					match("and"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:12: 'or'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:12: 'or'
 					{
 					match("or"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:19: 'not'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:19: 'not'
 					{
 					match("not"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:27: 'matches'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:27: 'matches'
 					{
 					match("matches"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:134:39: 'contains'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:39: 'contains'
 					{
 					match("contains"); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:3: DECLARE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:3: DECLARE
 					{
 					mDECLARE(); 
 
 					}
 					break;
 				case 7 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:13: DIALECT
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:13: DIALECT
 					{
 					mDIALECT(); 
 
 					}
 					break;
 				case 8 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:23: END
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:23: END
 					{
 					mEND(); 
 
 					}
 					break;
 				case 9 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:29: EXTENDS
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:29: EXTENDS
 					{
 					mEXTENDS(); 
 
 					}
 					break;
 				case 10 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:39: GLOBAL
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:39: GLOBAL
 					{
 					mGLOBAL(); 
 
 					}
 					break;
 				case 11 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:48: IMPORT
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:48: IMPORT
 					{
 					mIMPORT(); 
 
 					}
 					break;
 				case 12 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:57: PACKAGE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:57: PACKAGE
 					{
 					mPACKAGE(); 
 
 					}
 					break;
 				case 13 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:67: RULE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:67: RULE
 					{
 					mRULE(); 
 
 					}
 					break;
 				case 14 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:74: THEN
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:74: THEN
 					{
 					mTHEN(); 
 
 					}
 					break;
 				case 15 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:81: WHEN
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:81: WHEN
 					{
 					mWHEN(); 
 
 					}
 					break;
 				case 16 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:135:88: PRIMITIVE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:88: PRIMITIVE
 					{
 					mPRIMITIVE(); 
 
 					}
 					break;
 				case 17 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:137:3: 'new'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:3: 'new'
 					{
 					match("new"); 
 
 					}
 					break;
 				case 18 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:137:11: 'return'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:11: 'return'
 					{
 					match("return"); 
 
 					}
 					break;
 				case 19 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:137:22: 'if'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:22: 'if'
 					{
 					match("if"); 
 
 					}
 					break;
 				case 20 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:137:29: 'else'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:29: 'else'
 					{
 					match("else"); 
 
 					}
 					break;
 				case 21 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:137:38: 'do'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:38: 'do'
 					{
 					match("do"); 
 
 					}
 					break;
 				case 22 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:137:45: 'while'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:45: 'while'
 					{
 					match("while"); 
 
 					}
 					break;
 				case 23 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:137:55: 'for'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:55: 'for'
 					{
 					match("for"); 
 
@@ -870,8 +875,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = SEMICOLON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:141:2: ( ';' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:141:4: ';'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:2: ( ';' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:4: ';'
 			{
 			match(';'); 
 			}
@@ -890,8 +895,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = COLON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:145:2: ( ':' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:145:4: ':'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:157:2: ( ':' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:157:4: ':'
 			{
 			match(':'); 
 			}
@@ -910,7 +915,7 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = SEPARATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:2: ( '.' | '(' | ')' | '[' | ']' | ',' | COLON | SEMICOLON )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:161:2: ( '.' | '(' | ')' | '[' | ']' | ',' | COLON | SEMICOLON )
 			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:
 			{
 			if ( (input.LA(1) >= '(' && input.LA(1) <= ')')||input.LA(1)==','||input.LA(1)=='.'||(input.LA(1) >= ':' && input.LA(1) <= ';')||input.LA(1)=='['||input.LA(1)==']' ) {
@@ -937,7 +942,7 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = OPERATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:2: ( '==' | '!=' | '>' | '<' | '>=' | '<=' | '+' | '-' | '/' | '*' | '%' | '|' | '&' | '||' | '&&' | '!' | ':' | '=' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:2: ( '==' | '!=' | '>' | '<' | '>=' | '<=' | '+' | '-' | '/' | '*' | '%' | '|' | '&' | '||' | '&&' | '!' | ':' | '=' )
 			int alt3=18;
 			switch ( input.LA(1) ) {
 			case '=':
@@ -1055,115 +1060,115 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt3) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:4: '=='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:4: '=='
 					{
 					match("=="); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:11: '!='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:11: '!='
 					{
 					match("!="); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:18: '>'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:18: '>'
 					{
 					match('>'); 
 					}
 					break;
 				case 4 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:24: '<'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:24: '<'
 					{
 					match('<'); 
 					}
 					break;
 				case 5 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:30: '>='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:30: '>='
 					{
 					match(">="); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:37: '<='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:37: '<='
 					{
 					match("<="); 
 
 					}
 					break;
 				case 7 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:44: '+'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:44: '+'
 					{
 					match('+'); 
 					}
 					break;
 				case 8 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:50: '-'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:50: '-'
 					{
 					match('-'); 
 					}
 					break;
 				case 9 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:56: '/'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:56: '/'
 					{
 					match('/'); 
 					}
 					break;
 				case 10 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:62: '*'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:62: '*'
 					{
 					match('*'); 
 					}
 					break;
 				case 11 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:68: '%'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:68: '%'
 					{
 					match('%'); 
 					}
 					break;
 				case 12 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:74: '|'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:74: '|'
 					{
 					match('|'); 
 					}
 					break;
 				case 13 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:80: '&'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:80: '&'
 					{
 					match('&'); 
 					}
 					break;
 				case 14 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:86: '||'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:86: '||'
 					{
 					match("||"); 
 
 					}
 					break;
 				case 15 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:93: '&&'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:93: '&&'
 					{
 					match("&&"); 
 
 					}
 					break;
 				case 16 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:100: '!'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:100: '!'
 					{
 					match('!'); 
 					}
 					break;
 				case 17 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:106: ':'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:106: ':'
 					{
 					match(':'); 
 					}
 					break;
 				case 18 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:112: '='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:112: '='
 					{
 					match('='); 
 					}
@@ -1184,8 +1189,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:156:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:156:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:168:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:168:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -1195,7 +1200,7 @@ public class DroolsRuleLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:156:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:168:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -1240,8 +1245,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = BINDING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:160:2: ( '$' ID )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:160:4: '$' ID
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:2: ( '$' ID )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:4: '$' ID
 			{
 			match('$'); 
 			mID(); 
@@ -1262,12 +1267,12 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = FQN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:163:5: ( ID ( '.' ID )* )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:163:7: ID ( '.' ID )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:5: ( ID ( '.' ID )* )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:7: ID ( '.' ID )*
 			{
 			mID(); 
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:163:10: ( '.' ID )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:10: ( '.' ID )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -1278,7 +1283,7 @@ public class DroolsRuleLexer extends Lexer {
 
 				switch (alt5) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:163:11: '.' ID
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:11: '.' ID
 					{
 					match('.'); 
 					mID(); 
@@ -1307,10 +1312,10 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:166:5: ( ( '0' .. '9' )+ )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:166:7: ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:178:5: ( ( '0' .. '9' )+ )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:178:7: ( '0' .. '9' )+
 			{
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:166:7: ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:178:7: ( '0' .. '9' )+
 			int cnt6=0;
 			loop6:
 			while (true) {
@@ -1359,14 +1364,14 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:170:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
 			int alt13=3;
 			alt13 = dfa13.predict(input);
 			switch (alt13) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:170:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 					{
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:170:9: ( '0' .. '9' )+
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:9: ( '0' .. '9' )+
 					int cnt7=0;
 					loop7:
 					while (true) {
@@ -1400,7 +1405,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 
 					match('.'); 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:170:25: ( '0' .. '9' )*
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:25: ( '0' .. '9' )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -1429,7 +1434,7 @@ public class DroolsRuleLexer extends Lexer {
 						}
 					}
 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:170:37: ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:37: ( EXPONENT )?
 					int alt9=2;
 					int LA9_0 = input.LA(1);
 					if ( (LA9_0=='E'||LA9_0=='e') ) {
@@ -1437,7 +1442,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					switch (alt9) {
 						case 1 :
-							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:170:37: EXPONENT
+							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:37: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -1449,10 +1454,10 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:171:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
 					{
 					match('.'); 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:171:13: ( '0' .. '9' )+
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:13: ( '0' .. '9' )+
 					int cnt10=0;
 					loop10:
 					while (true) {
@@ -1485,7 +1490,7 @@ public class DroolsRuleLexer extends Lexer {
 						cnt10++;
 					}
 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:171:25: ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:25: ( EXPONENT )?
 					int alt11=2;
 					int LA11_0 = input.LA(1);
 					if ( (LA11_0=='E'||LA11_0=='e') ) {
@@ -1493,7 +1498,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					switch (alt11) {
 						case 1 :
-							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:171:25: EXPONENT
+							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:25: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -1505,9 +1510,9 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:9: ( '0' .. '9' )+ EXPONENT
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:184:9: ( '0' .. '9' )+ EXPONENT
 					{
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:9: ( '0' .. '9' )+
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:184:9: ( '0' .. '9' )+
 					int cnt12=0;
 					loop12:
 					while (true) {
@@ -1560,12 +1565,12 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = SINGLELINE_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:176:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:176:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:176:9: (~ ( '\\n' | '\\r' ) )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:9: (~ ( '\\n' | '\\r' ) )*
 			loop14:
 			while (true) {
 				int alt14=2;
@@ -1594,7 +1599,7 @@ public class DroolsRuleLexer extends Lexer {
 				}
 			}
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:176:23: ( '\\r' )?
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:23: ( '\\r' )?
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0=='\r') ) {
@@ -1602,7 +1607,7 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt15) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:176:23: '\\r'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:23: '\\r'
 					{
 					match('\r'); 
 					}
@@ -1628,12 +1633,12 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = MULTILINE_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:180:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:180:4: '/*' ( options {greedy=false; } : . )* '*/'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:4: '/*' ( options {greedy=false; } : . )* '*/'
 			{
 			match("/*"); 
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:180:9: ( options {greedy=false; } : . )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:9: ( options {greedy=false; } : . )*
 			loop16:
 			while (true) {
 				int alt16=2;
@@ -1654,7 +1659,7 @@ public class DroolsRuleLexer extends Lexer {
 
 				switch (alt16) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:180:37: .
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:37: .
 					{
 					matchAny(); 
 					}
@@ -1684,8 +1689,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:195:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:195:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -1712,11 +1717,11 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 			{
 			match('\"'); 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 			loop17:
 			while (true) {
 				int alt17=3;
@@ -1730,14 +1735,14 @@ public class DroolsRuleLexer extends Lexer {
 
 				switch (alt17) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:14: ESC_SEQ
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:14: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:24: ~ ( '\\\\' | '\"' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:24: ~ ( '\\\\' | '\"' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -1772,11 +1777,11 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = CHAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:194:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:194:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
 			{
 			match('\''); 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:194:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0=='\\') ) {
@@ -1794,14 +1799,14 @@ public class DroolsRuleLexer extends Lexer {
 
 			switch (alt18) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:194:15: ESC_SEQ
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:15: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:194:25: ~ ( '\\'' | '\\\\' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:25: ~ ( '\\'' | '\\\\' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -1831,8 +1836,8 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "EXPONENT"
 	public final void mEXPONENT() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:199:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:199:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
 			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 				input.consume();
@@ -1842,7 +1847,7 @@ public class DroolsRuleLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:199:22: ( '+' | '-' )?
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:22: ( '+' | '-' )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0=='+'||LA19_0=='-') ) {
@@ -1865,7 +1870,7 @@ public class DroolsRuleLexer extends Lexer {
 
 			}
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:199:33: ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:33: ( '0' .. '9' )+
 			int cnt20=0;
 			loop20:
 			while (true) {
@@ -1910,7 +1915,7 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "HEX_DIGIT"
 	public final void mHEX_DIGIT() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:202:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
@@ -1933,7 +1938,7 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "ESC_SEQ"
 	public final void mESC_SEQ() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:218:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt21=3;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0=='\\') ) {
@@ -1988,7 +1993,7 @@ public class DroolsRuleLexer extends Lexer {
 
 			switch (alt21) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:218:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 					{
 					match('\\'); 
 					if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -2002,14 +2007,14 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:207:9: UNICODE_ESC
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:219:9: UNICODE_ESC
 					{
 					mUNICODE_ESC(); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:208:9: OCTAL_ESC
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:220:9: OCTAL_ESC
 					{
 					mOCTAL_ESC(); 
 
@@ -2027,7 +2032,7 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "OCTAL_ESC"
 	public final void mOCTAL_ESC() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:213:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:225:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt22=3;
 			int LA22_0 = input.LA(1);
 			if ( (LA22_0=='\\') ) {
@@ -2085,7 +2090,7 @@ public class DroolsRuleLexer extends Lexer {
 
 			switch (alt22) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:213:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:225:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '3') ) {
@@ -2115,7 +2120,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:226:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -2137,7 +2142,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:215:9: '\\\\' ( '0' .. '7' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:227:9: '\\\\' ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -2162,8 +2167,8 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "UNICODE_ESC"
 	public final void mUNICODE_ESC() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:220:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:220:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:232:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:232:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
 			match('\\'); 
 			match('u'); 
@@ -2430,7 +2435,7 @@ public class DroolsRuleLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "169:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+			return "181:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
 		}
 	}
 
