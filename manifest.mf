@@ -2,5 +2,5 @@ Manifest-Version: 1.0
 OpenIDE-Module: com.afqa123.drools
 OpenIDE-Module-Layer: com/afqa123/drools/layer.xml
 OpenIDE-Module-Localizing-Bundle: com/afqa123/drools/Bundle.properties
-OpenIDE-Module-Specification-Version: 0.5
+OpenIDE-Module-Specification-Version: 0.6
 
