@@ -138,15 +138,19 @@ WHEN
 	:	'when'
 	;
 	
+SALIENCE
+	:	'salience'
+	;
+	
 PRIMITIVE
 	:	'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char'
 	;	
 	
 KEYWORD
 	:	'and' | 'or' | 'not' | 'matches' | 'contains' |
-		DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE |
+		DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | SALIENCE |
 		// Java keywords
-		'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for'
+		'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' | 'try' | 'catch' | 'finally' | 'break' | 'continue'
 	;
 
 SEMICOLON
@@ -167,6 +171,10 @@ OPERATOR
 	
 ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
     ;	
+
+META
+    :   '@' ID
+    ;
 
 BINDING
 	:	'$' ID

@@ -61,7 +61,9 @@ public class DRLLanguageHierarchy extends LanguageHierarchy<DRLTokenId> {
             new DRLTokenId("THEN", "keyword", DroolsRuleLexer.THEN),
             new DRLTokenId("WHEN", "keyword", DroolsRuleLexer.WHEN),
             new DRLTokenId("END", "keyword", DroolsRuleLexer.END),            
+            new DRLTokenId("SALIENCE", "keyword", DroolsRuleLexer.SALIENCE),            
             new DRLTokenId("PRIMITIVE", "keyword", DroolsRuleLexer.PRIMITIVE),            
+            new DRLTokenId("META", "keyword", DroolsRuleLexer.META),
             
             new DRLTokenId("SEPARATOR", "separator", DroolsRuleLexer.SEPARATOR),         
             new DRLTokenId("SEMICOLON", "separator", DroolsRuleLexer.SEMICOLON),         

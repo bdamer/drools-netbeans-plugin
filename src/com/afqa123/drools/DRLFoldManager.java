@@ -27,9 +27,11 @@ package com.afqa123.drools;
 
 import com.afqa123.drools.grammar.DroolsRuleLexer;
 import com.afqa123.drools.lexer.DRLTokenId;
+import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.logging.Logger;
 import javax.swing.event.DocumentEvent;
 import javax.swing.text.BadLocationException;
 import javax.swing.text.Document;
@@ -56,6 +58,7 @@ public class DRLFoldManager implements FoldManager {
         }
     }
 
+    private final static Logger logger = Logger.getLogger(DRLFoldManager.class.getName());
     private FoldOperation operation;
     
     @Override
@@ -69,7 +72,6 @@ public class DRLFoldManager implements FoldManager {
     }
 
     private void updateFolds(FoldHierarchyTransaction fht) {
-        removeAllFolds(fht);
         FoldHierarchy hierarchy = operation.getHierarchy();
         Document document = hierarchy.getComponent().getDocument();
         TokenHierarchy<Document> hi = TokenHierarchy.get(document);
@@ -81,7 +83,7 @@ public class DRLFoldManager implements FoldManager {
             try {
                 switch (id.ordinal()) {
                     case DroolsRuleLexer.MULTILINE_COMMENT:
-                        addFold(FoldType.COMMENT, offset, offset + token.length(), fht);
+                        addFold(FoldType.COMMENT, offset, offset + token.length(), fht, null);
                         break;
                     case DroolsRuleLexer.SINGLELINE_COMMENT: {
                         int start = offset;
@@ -96,33 +98,38 @@ public class DRLFoldManager implements FoldManager {
                             }
                         }
                         if (stop > -1) {
-                            addFold(FoldType.COMMENT, start, stop, fht);
+                            addFold(FoldType.COMMENT, start, stop, fht, null);
                         }
                         break;
                     }
                     case DroolsRuleLexer.RULE: {
-                        int start = offset + token.length();
-                        skipWhitespace(ts);
-                        token = ts.token();
-                        if (token.id().ordinal() == DroolsRuleLexer.STRING) {
-                            start = ts.offset() + token.length();
-                        }
+                        // Start of the rule
+                        int ruleStart = offset;
+                        // Start of the fold; not the same as start of the rule.
+                        int start = findRuleStart(ruleStart + token.length(), ts);
                         int stop = -1;
                         while (ts.moveNext()) {
                             token = ts.token();
                             id = token.id();
-                            if (id.ordinal() == DroolsRuleLexer.END) {
+                        
+                            if (id.ordinal() == DroolsRuleLexer.RULE) {
+                                // found the next RULE before we saw the end 
+                                // to the current one -> not a well-formed rule.
+                                ruleStart = ts.offset();
+                                start = findRuleStart(ruleStart + token.length(), ts);
+                            } else if (id.ordinal() == DroolsRuleLexer.END) {
                                 stop = ts.offset() + token.length();
                                 break;
                             }
                         }
                         if (stop > -1) {
-                            addFold(FoldType.COMMENT, start, stop, fht);
+                            addFold(FoldType.CODE_BLOCK, start, stop, fht, (Integer)ruleStart);
                         }
                         break;
                     }
                     case DroolsRuleLexer.DECLARE: {
-                        int start = offset + token.length();
+                        int declareStart = offset;
+                        int start = declareStart + token.length();
                         skipWhitespace(ts);
                         token = ts.token();
                         if (token.id().ordinal() == DroolsRuleLexer.FQN
@@ -139,7 +146,7 @@ public class DRLFoldManager implements FoldManager {
                             }
                         }
                         if (stop > -1) {
-                            addFold(FoldType.CODE_BLOCK, start, stop, fht);
+                            addFold(FoldType.CODE_BLOCK, start, stop, fht, (Integer)declareStart);
                         }
                         break;
                     }
@@ -150,6 +157,16 @@ public class DRLFoldManager implements FoldManager {
         }
     }
     
+    private int findRuleStart(int offset, TokenSequence<DRLTokenId> ts) {
+        skipWhitespace(ts);
+        Token<DRLTokenId> token = ts.token();
+        if (token.id().ordinal() == DroolsRuleLexer.STRING) {
+            offset = ts.offset() + token.length();
+        }
+        return offset;
+    }
+    
+    @Deprecated
     private void removeAllFolds(FoldHierarchyTransaction fht) {
         // need to collect first, since removeFromHierarchy changes 
         // the underlying collection
@@ -163,37 +180,65 @@ public class DRLFoldManager implements FoldManager {
         }
     }
     
-    private void addFold(FoldType type, int start, int stop, FoldHierarchyTransaction fht) 
+    private void addFold(FoldType type, int start, int stop, FoldHierarchyTransaction fht, Object extraInfo) 
             throws BadLocationException {
-        // Not needed, since we currently remove all folds
-        /*Iterator<Fold> it = operation.foldIterator();
+        Iterator<Fold> it = operation.foldIterator();
         while (it.hasNext()) {
             Fold f = it.next();
             // don't replace existing folds unless they've changed
             if (f.getStartOffset() == start && f.getEndOffset() == stop &&
                     f.getType() == type) {
+                //logger.info("Fold wasn't changed, skipping add...");
                 return;
             }
             // remove if old fold was changed
             if (f.getStartOffset() >= start && f.getStartOffset() <= stop) {
                 operation.removeFromHierarchy(f, fht);
             }
-        }*/   
-        operation.addToHierarchy(type, start, stop, false, null, null, operation.getHierarchy(), fht);
+        }
+        operation.addToHierarchy(type, start, stop, false, null, null, extraInfo, fht);
     }
      
     private void skipWhitespace(TokenSequence<DRLTokenId> ts) {
         while (ts.moveNext() && ts.token().id().ordinal() == DroolsRuleLexer.WS) {
         }
     }
+    
+    private void removeFoldAt(int offset, int length, FoldHierarchyTransaction fht) {
+        Iterator<Fold> it = operation.foldIterator();
+        List<Fold> folds = new ArrayList<Fold>();
+        while (it.hasNext()) {
+            Fold fold = it.next();
+            Object extraInfo = null;
+            try {
+                // Why is this not a public method???
+                Method m = Fold.class.getDeclaredMethod("getExtraInfo");
+                m.setAccessible(true);
+                extraInfo = m.invoke(fold);
+            } catch (Exception e) {
+                //logger.warning("Error getting extraInfo: " + e.getMessage());
+            }
+            int fstart = (extraInfo == null ? fold.getStartOffset() : (Integer)extraInfo);
+            int fend = fold.getEndOffset();
+            if (fend < offset || fstart > offset + length) {
+                continue;
+            }
+            folds.add(fold);
+        }
+        for (Fold f : folds) {
+            operation.removeFromHierarchy(f, fht);
+        }
+    }
 
     @Override
     public void insertUpdate(DocumentEvent de, FoldHierarchyTransaction fht) {
+        removeFoldAt(de.getOffset(), de.getLength(), fht);
         updateFolds(fht);
     }
 
     @Override
     public void removeUpdate(DocumentEvent de, FoldHierarchyTransaction fht) {
+        removeFoldAt(de.getOffset(), de.getLength(), fht);
         updateFolds(fht);
     }
 

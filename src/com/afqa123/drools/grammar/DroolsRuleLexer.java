@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g 2013-12-07 19:01:43
+// $ANTLR 3.5.1 C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g 2014-06-09 12:50:14
 
 package com.afqa123.drools.grammar;
 
@@ -28,20 +28,22 @@ public class DroolsRuleLexer extends Lexer {
 	public static final int IMPORT=18;
 	public static final int INT=19;
 	public static final int KEYWORD=20;
-	public static final int MULTILINE_COMMENT=21;
-	public static final int OCTAL_ESC=22;
-	public static final int OPERATOR=23;
-	public static final int PACKAGE=24;
-	public static final int PRIMITIVE=25;
-	public static final int RULE=26;
-	public static final int SEMICOLON=27;
-	public static final int SEPARATOR=28;
-	public static final int SINGLELINE_COMMENT=29;
-	public static final int STRING=30;
-	public static final int THEN=31;
-	public static final int UNICODE_ESC=32;
-	public static final int WHEN=33;
-	public static final int WS=34;
+	public static final int META=21;
+	public static final int MULTILINE_COMMENT=22;
+	public static final int OCTAL_ESC=23;
+	public static final int OPERATOR=24;
+	public static final int PACKAGE=25;
+	public static final int PRIMITIVE=26;
+	public static final int RULE=27;
+	public static final int SALIENCE=28;
+	public static final int SEMICOLON=29;
+	public static final int SEPARATOR=30;
+	public static final int SINGLELINE_COMMENT=31;
+	public static final int STRING=32;
+	public static final int THEN=33;
+	public static final int UNICODE_ESC=34;
+	public static final int WHEN=35;
+	public static final int WS=36;
 
 		@Override
 		public void emitErrorMessage(String msg) {
@@ -273,12 +275,33 @@ public class DroolsRuleLexer extends Lexer {
 	}
 	// $ANTLR end "WHEN"
 
+	// $ANTLR start "SALIENCE"
+	public final void mSALIENCE() throws RecognitionException {
+		try {
+			int _type = SALIENCE;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:2: ( 'salience' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:4: 'salience'
+			{
+			match("salience"); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "SALIENCE"
+
 	// $ANTLR start "PRIMITIVE"
 	public final void mPRIMITIVE() throws RecognitionException {
 		try {
 			int _type = PRIMITIVE;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:2: ( 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:2: ( 'byte' | 'short' | 'int' | 'long' | 'float' | 'double' | 'boolean' | 'char' )
 			int alt1=8;
 			switch ( input.LA(1) ) {
 			case 'b':
@@ -342,56 +365,56 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt1) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:4: 'byte'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:4: 'byte'
 					{
 					match("byte"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:13: 'short'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:13: 'short'
 					{
 					match("short"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:23: 'int'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:23: 'int'
 					{
 					match("int"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:31: 'long'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:31: 'long'
 					{
 					match("long"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:40: 'float'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:40: 'float'
 					{
 					match("float"); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:50: 'double'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:50: 'double'
 					{
 					match("double"); 
 
 					}
 					break;
 				case 7 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:61: 'boolean'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:61: 'boolean'
 					{
 					match("boolean"); 
 
 					}
 					break;
 				case 8 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:142:73: 'char'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:73: 'char'
 					{
 					match("char"); 
 
@@ -413,8 +436,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = KEYWORD;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:2: ( 'and' | 'or' | 'not' | 'matches' | 'contains' | DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | 'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' )
-			int alt2=23;
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:150:2: ( 'and' | 'or' | 'not' | 'matches' | 'contains' | DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | SALIENCE | 'new' | 'return' | 'if' | 'else' | 'do' | 'while' | 'for' | 'try' | 'catch' | 'finally' | 'break' | 'continue' )
+			int alt2=29;
 			switch ( input.LA(1) ) {
 			case 'a':
 				{
@@ -433,7 +456,7 @@ public class DroolsRuleLexer extends Lexer {
 					alt2=3;
 				}
 				else if ( (LA2_3=='e') ) {
-					alt2=17;
+					alt2=18;
 				}
 
 				else {
@@ -457,15 +480,80 @@ public class DroolsRuleLexer extends Lexer {
 				break;
 			case 'c':
 				{
-				int LA2_5 = input.LA(2);
-				if ( (LA2_5=='o') ) {
-					alt2=5;
-				}
-				else if ( (LA2_5=='h') ) {
-					alt2=16;
-				}
+				switch ( input.LA(2) ) {
+				case 'o':
+					{
+					int LA2_20 = input.LA(3);
+					if ( (LA2_20=='n') ) {
+						int LA2_39 = input.LA(4);
+						if ( (LA2_39=='t') ) {
+							int LA2_43 = input.LA(5);
+							if ( (LA2_43=='a') ) {
+								alt2=5;
+							}
+							else if ( (LA2_43=='i') ) {
+								alt2=29;
+							}
 
-				else {
+							else {
+								int nvaeMark = input.mark();
+								try {
+									for (int nvaeConsume = 0; nvaeConsume < 5 - 1; nvaeConsume++) {
+										input.consume();
+									}
+									NoViableAltException nvae =
+										new NoViableAltException("", 2, 43, input);
+									throw nvae;
+								} finally {
+									input.rewind(nvaeMark);
+								}
+							}
+
+						}
+
+						else {
+							int nvaeMark = input.mark();
+							try {
+								for (int nvaeConsume = 0; nvaeConsume < 4 - 1; nvaeConsume++) {
+									input.consume();
+								}
+								NoViableAltException nvae =
+									new NoViableAltException("", 2, 39, input);
+								throw nvae;
+							} finally {
+								input.rewind(nvaeMark);
+							}
+						}
+
+					}
+
+					else {
+						int nvaeMark = input.mark();
+						try {
+							for (int nvaeConsume = 0; nvaeConsume < 3 - 1; nvaeConsume++) {
+								input.consume();
+							}
+							NoViableAltException nvae =
+								new NoViableAltException("", 2, 20, input);
+							throw nvae;
+						} finally {
+							input.rewind(nvaeMark);
+						}
+					}
+
+					}
+					break;
+				case 'h':
+					{
+					alt2=16;
+					}
+					break;
+				case 'a':
+					{
+					alt2=26;
+					}
+					break;
+				default:
 					int nvaeMark = input.mark();
 					try {
 						input.consume();
@@ -476,7 +564,6 @@ public class DroolsRuleLexer extends Lexer {
 						input.rewind(nvaeMark);
 					}
 				}
-
 				}
 				break;
 			case 'd':
@@ -494,13 +581,13 @@ public class DroolsRuleLexer extends Lexer {
 					break;
 				case 'o':
 					{
-					int LA2_21 = input.LA(3);
-					if ( (LA2_21=='u') ) {
+					int LA2_24 = input.LA(3);
+					if ( (LA2_24=='u') ) {
 						alt2=16;
 					}
 
 					else {
-						alt2=21;
+						alt2=22;
 					}
 
 					}
@@ -533,7 +620,7 @@ public class DroolsRuleLexer extends Lexer {
 					break;
 				case 'l':
 					{
-					alt2=20;
+					alt2=21;
 					}
 					break;
 				default:
@@ -569,7 +656,7 @@ public class DroolsRuleLexer extends Lexer {
 					break;
 				case 'f':
 					{
-					alt2=19;
+					alt2=20;
 					}
 					break;
 				default:
@@ -597,7 +684,7 @@ public class DroolsRuleLexer extends Lexer {
 					alt2=13;
 				}
 				else if ( (LA2_11=='e') ) {
-					alt2=18;
+					alt2=19;
 				}
 
 				else {
@@ -616,19 +703,38 @@ public class DroolsRuleLexer extends Lexer {
 				break;
 			case 't':
 				{
-				alt2=14;
+				int LA2_12 = input.LA(2);
+				if ( (LA2_12=='h') ) {
+					alt2=14;
+				}
+				else if ( (LA2_12=='r') ) {
+					alt2=25;
+				}
+
+				else {
+					int nvaeMark = input.mark();
+					try {
+						input.consume();
+						NoViableAltException nvae =
+							new NoViableAltException("", 2, 12, input);
+						throw nvae;
+					} finally {
+						input.rewind(nvaeMark);
+					}
+				}
+
 				}
 				break;
 			case 'w':
 				{
 				int LA2_13 = input.LA(2);
 				if ( (LA2_13=='h') ) {
-					int LA2_29 = input.LA(3);
-					if ( (LA2_29=='e') ) {
+					int LA2_34 = input.LA(3);
+					if ( (LA2_34=='e') ) {
 						alt2=15;
 					}
-					else if ( (LA2_29=='i') ) {
-						alt2=22;
+					else if ( (LA2_34=='i') ) {
+						alt2=23;
 					}
 
 					else {
@@ -638,7 +744,7 @@ public class DroolsRuleLexer extends Lexer {
 								input.consume();
 							}
 							NoViableAltException nvae =
-								new NoViableAltException("", 2, 29, input);
+								new NoViableAltException("", 2, 34, input);
 							throw nvae;
 						} finally {
 							input.rewind(nvaeMark);
@@ -662,20 +768,37 @@ public class DroolsRuleLexer extends Lexer {
 				}
 				break;
 			case 'b':
-			case 'l':
-			case 's':
 				{
-				alt2=16;
-				}
-				break;
-			case 'f':
-				{
-				int LA2_15 = input.LA(2);
-				if ( (LA2_15=='l') ) {
+				int LA2_14 = input.LA(2);
+				if ( (LA2_14=='o'||LA2_14=='y') ) {
 					alt2=16;
 				}
-				else if ( (LA2_15=='o') ) {
-					alt2=23;
+				else if ( (LA2_14=='r') ) {
+					alt2=28;
+				}
+
+				else {
+					int nvaeMark = input.mark();
+					try {
+						input.consume();
+						NoViableAltException nvae =
+							new NoViableAltException("", 2, 14, input);
+						throw nvae;
+					} finally {
+						input.rewind(nvaeMark);
+					}
+				}
+
+				}
+				break;
+			case 's':
+				{
+				int LA2_15 = input.LA(2);
+				if ( (LA2_15=='h') ) {
+					alt2=16;
+				}
+				else if ( (LA2_15=='a') ) {
+					alt2=17;
 				}
 
 				else {
@@ -692,6 +815,42 @@ public class DroolsRuleLexer extends Lexer {
 
 				}
 				break;
+			case 'l':
+				{
+				alt2=16;
+				}
+				break;
+			case 'f':
+				{
+				switch ( input.LA(2) ) {
+				case 'l':
+					{
+					alt2=16;
+					}
+					break;
+				case 'o':
+					{
+					alt2=24;
+					}
+					break;
+				case 'i':
+					{
+					alt2=27;
+					}
+					break;
+				default:
+					int nvaeMark = input.mark();
+					try {
+						input.consume();
+						NoViableAltException nvae =
+							new NoViableAltException("", 2, 17, input);
+						throw nvae;
+					} finally {
+						input.rewind(nvaeMark);
+					}
+				}
+				}
+				break;
 			default:
 				NoViableAltException nvae =
 					new NoViableAltException("", 2, 0, input);
@@ -699,163 +858,205 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt2) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:4: 'and'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:150:4: 'and'
 					{
 					match("and"); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:12: 'or'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:150:12: 'or'
 					{
 					match("or"); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:19: 'not'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:150:19: 'not'
 					{
 					match("not"); 
 
 					}
 					break;
 				case 4 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:27: 'matches'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:150:27: 'matches'
 					{
 					match("matches"); 
 
 					}
 					break;
 				case 5 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:146:39: 'contains'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:150:39: 'contains'
 					{
 					match("contains"); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:3: DECLARE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:3: DECLARE
 					{
 					mDECLARE(); 
 
 					}
 					break;
 				case 7 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:13: DIALECT
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:13: DIALECT
 					{
 					mDIALECT(); 
 
 					}
 					break;
 				case 8 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:23: END
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:23: END
 					{
 					mEND(); 
 
 					}
 					break;
 				case 9 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:29: EXTENDS
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:29: EXTENDS
 					{
 					mEXTENDS(); 
 
 					}
 					break;
 				case 10 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:39: GLOBAL
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:39: GLOBAL
 					{
 					mGLOBAL(); 
 
 					}
 					break;
 				case 11 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:48: IMPORT
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:48: IMPORT
 					{
 					mIMPORT(); 
 
 					}
 					break;
 				case 12 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:57: PACKAGE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:57: PACKAGE
 					{
 					mPACKAGE(); 
 
 					}
 					break;
 				case 13 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:67: RULE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:67: RULE
 					{
 					mRULE(); 
 
 					}
 					break;
 				case 14 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:74: THEN
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:74: THEN
 					{
 					mTHEN(); 
 
 					}
 					break;
 				case 15 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:81: WHEN
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:81: WHEN
 					{
 					mWHEN(); 
 
 					}
 					break;
 				case 16 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:147:88: PRIMITIVE
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:88: PRIMITIVE
 					{
 					mPRIMITIVE(); 
 
 					}
 					break;
 				case 17 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:3: 'new'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:151:100: SALIENCE
+					{
+					mSALIENCE(); 
+
+					}
+					break;
+				case 18 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:3: 'new'
 					{
 					match("new"); 
 
 					}
 					break;
-				case 18 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:11: 'return'
+				case 19 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:11: 'return'
 					{
 					match("return"); 
 
 					}
 					break;
-				case 19 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:22: 'if'
+				case 20 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:22: 'if'
 					{
 					match("if"); 
 
 					}
 					break;
-				case 20 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:29: 'else'
+				case 21 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:29: 'else'
 					{
 					match("else"); 
 
 					}
 					break;
-				case 21 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:38: 'do'
+				case 22 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:38: 'do'
 					{
 					match("do"); 
 
 					}
 					break;
-				case 22 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:45: 'while'
+				case 23 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:45: 'while'
 					{
 					match("while"); 
 
 					}
 					break;
-				case 23 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:149:55: 'for'
+				case 24 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:55: 'for'
 					{
 					match("for"); 
+
+					}
+					break;
+				case 25 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:63: 'try'
+					{
+					match("try"); 
+
+					}
+					break;
+				case 26 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:71: 'catch'
+					{
+					match("catch"); 
+
+					}
+					break;
+				case 27 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:81: 'finally'
+					{
+					match("finally"); 
+
+					}
+					break;
+				case 28 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:93: 'break'
+					{
+					match("break"); 
+
+					}
+					break;
+				case 29 :
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:103: 'continue'
+					{
+					match("continue"); 
 
 					}
 					break;
@@ -875,8 +1076,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = SEMICOLON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:2: ( ';' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:153:4: ';'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:157:2: ( ';' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:157:4: ';'
 			{
 			match(';'); 
 			}
@@ -895,8 +1096,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = COLON;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:157:2: ( ':' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:157:4: ':'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:161:2: ( ':' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:161:4: ':'
 			{
 			match(':'); 
 			}
@@ -915,7 +1116,7 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = SEPARATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:161:2: ( '.' | '(' | ')' | '[' | ']' | ',' | COLON | SEMICOLON )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:2: ( '.' | '(' | ')' | '[' | ']' | ',' | COLON | SEMICOLON )
 			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:
 			{
 			if ( (input.LA(1) >= '(' && input.LA(1) <= ')')||input.LA(1)==','||input.LA(1)=='.'||(input.LA(1) >= ':' && input.LA(1) <= ';')||input.LA(1)=='['||input.LA(1)==']' ) {
@@ -942,7 +1143,7 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = OPERATOR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:2: ( '==' | '!=' | '>' | '<' | '>=' | '<=' | '+' | '-' | '/' | '*' | '%' | '|' | '&' | '||' | '&&' | '!' | ':' | '=' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:2: ( '==' | '!=' | '>' | '<' | '>=' | '<=' | '+' | '-' | '/' | '*' | '%' | '|' | '&' | '||' | '&&' | '!' | ':' | '=' )
 			int alt3=18;
 			switch ( input.LA(1) ) {
 			case '=':
@@ -1060,115 +1261,115 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt3) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:4: '=='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:4: '=='
 					{
 					match("=="); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:11: '!='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:11: '!='
 					{
 					match("!="); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:18: '>'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:18: '>'
 					{
 					match('>'); 
 					}
 					break;
 				case 4 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:24: '<'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:24: '<'
 					{
 					match('<'); 
 					}
 					break;
 				case 5 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:30: '>='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:30: '>='
 					{
 					match(">="); 
 
 					}
 					break;
 				case 6 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:37: '<='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:37: '<='
 					{
 					match("<="); 
 
 					}
 					break;
 				case 7 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:44: '+'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:44: '+'
 					{
 					match('+'); 
 					}
 					break;
 				case 8 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:50: '-'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:50: '-'
 					{
 					match('-'); 
 					}
 					break;
 				case 9 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:56: '/'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:56: '/'
 					{
 					match('/'); 
 					}
 					break;
 				case 10 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:62: '*'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:62: '*'
 					{
 					match('*'); 
 					}
 					break;
 				case 11 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:68: '%'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:68: '%'
 					{
 					match('%'); 
 					}
 					break;
 				case 12 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:74: '|'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:74: '|'
 					{
 					match('|'); 
 					}
 					break;
 				case 13 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:80: '&'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:80: '&'
 					{
 					match('&'); 
 					}
 					break;
 				case 14 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:86: '||'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:86: '||'
 					{
 					match("||"); 
 
 					}
 					break;
 				case 15 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:93: '&&'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:93: '&&'
 					{
 					match("&&"); 
 
 					}
 					break;
 				case 16 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:100: '!'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:100: '!'
 					{
 					match('!'); 
 					}
 					break;
 				case 17 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:106: ':'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:106: ':'
 					{
 					match(':'); 
 					}
 					break;
 				case 18 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:165:112: '='
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:169:112: '='
 					{
 					match('='); 
 					}
@@ -1189,8 +1390,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = ID;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:168:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:168:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			{
 			if ( (input.LA(1) >= 'A' && input.LA(1) <= 'Z')||input.LA(1)=='_'||(input.LA(1) >= 'a' && input.LA(1) <= 'z') ) {
 				input.consume();
@@ -1200,7 +1401,7 @@ public class DroolsRuleLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:168:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
 			loop4:
 			while (true) {
 				int alt4=2;
@@ -1240,13 +1441,35 @@ public class DroolsRuleLexer extends Lexer {
 	}
 	// $ANTLR end "ID"
 
+	// $ANTLR start "META"
+	public final void mMETA() throws RecognitionException {
+		try {
+			int _type = META;
+			int _channel = DEFAULT_TOKEN_CHANNEL;
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:176:5: ( '@' ID )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:176:9: '@' ID
+			{
+			match('@'); 
+			mID(); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally {
+			// do for sure before leaving
+		}
+	}
+	// $ANTLR end "META"
+
 	// $ANTLR start "BINDING"
 	public final void mBINDING() throws RecognitionException {
 		try {
 			int _type = BINDING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:2: ( '$' ID )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:172:4: '$' ID
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:180:2: ( '$' ID )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:180:4: '$' ID
 			{
 			match('$'); 
 			mID(); 
@@ -1267,12 +1490,12 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = FQN;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:5: ( ID ( '.' ID )* )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:7: ID ( '.' ID )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:5: ( ID ( '.' ID )* )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:7: ID ( '.' ID )*
 			{
 			mID(); 
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:10: ( '.' ID )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:10: ( '.' ID )*
 			loop5:
 			while (true) {
 				int alt5=2;
@@ -1283,7 +1506,7 @@ public class DroolsRuleLexer extends Lexer {
 
 				switch (alt5) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:175:11: '.' ID
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:11: '.' ID
 					{
 					match('.'); 
 					mID(); 
@@ -1312,10 +1535,10 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = INT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:178:5: ( ( '0' .. '9' )+ )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:178:7: ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:186:5: ( ( '0' .. '9' )+ )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:186:7: ( '0' .. '9' )+
 			{
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:178:7: ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:186:7: ( '0' .. '9' )+
 			int cnt6=0;
 			loop6:
 			while (true) {
@@ -1364,14 +1587,14 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = FLOAT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:190:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
 			int alt13=3;
 			alt13 = dfa13.predict(input);
 			switch (alt13) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:190:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
 					{
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:9: ( '0' .. '9' )+
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:190:9: ( '0' .. '9' )+
 					int cnt7=0;
 					loop7:
 					while (true) {
@@ -1405,7 +1628,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 
 					match('.'); 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:25: ( '0' .. '9' )*
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:190:25: ( '0' .. '9' )*
 					loop8:
 					while (true) {
 						int alt8=2;
@@ -1434,7 +1657,7 @@ public class DroolsRuleLexer extends Lexer {
 						}
 					}
 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:37: ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:190:37: ( EXPONENT )?
 					int alt9=2;
 					int LA9_0 = input.LA(1);
 					if ( (LA9_0=='E'||LA9_0=='e') ) {
@@ -1442,7 +1665,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					switch (alt9) {
 						case 1 :
-							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:182:37: EXPONENT
+							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:190:37: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -1454,10 +1677,10 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
 					{
 					match('.'); 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:13: ( '0' .. '9' )+
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:13: ( '0' .. '9' )+
 					int cnt10=0;
 					loop10:
 					while (true) {
@@ -1490,7 +1713,7 @@ public class DroolsRuleLexer extends Lexer {
 						cnt10++;
 					}
 
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:25: ( EXPONENT )?
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:25: ( EXPONENT )?
 					int alt11=2;
 					int LA11_0 = input.LA(1);
 					if ( (LA11_0=='E'||LA11_0=='e') ) {
@@ -1498,7 +1721,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					switch (alt11) {
 						case 1 :
-							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:183:25: EXPONENT
+							// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:191:25: EXPONENT
 							{
 							mEXPONENT(); 
 
@@ -1510,9 +1733,9 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:184:9: ( '0' .. '9' )+ EXPONENT
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:9: ( '0' .. '9' )+ EXPONENT
 					{
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:184:9: ( '0' .. '9' )+
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:9: ( '0' .. '9' )+
 					int cnt12=0;
 					loop12:
 					while (true) {
@@ -1565,12 +1788,12 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = SINGLELINE_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:196:2: ( '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:196:4: '//' (~ ( '\\n' | '\\r' ) )* ( '\\r' )? '\\n'
 			{
 			match("//"); 
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:9: (~ ( '\\n' | '\\r' ) )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:196:9: (~ ( '\\n' | '\\r' ) )*
 			loop14:
 			while (true) {
 				int alt14=2;
@@ -1599,7 +1822,7 @@ public class DroolsRuleLexer extends Lexer {
 				}
 			}
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:23: ( '\\r' )?
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:196:23: ( '\\r' )?
 			int alt15=2;
 			int LA15_0 = input.LA(1);
 			if ( (LA15_0=='\r') ) {
@@ -1607,7 +1830,7 @@ public class DroolsRuleLexer extends Lexer {
 			}
 			switch (alt15) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:188:23: '\\r'
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:196:23: '\\r'
 					{
 					match('\r'); 
 					}
@@ -1633,12 +1856,12 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = MULTILINE_COMMENT;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:4: '/*' ( options {greedy=false; } : . )* '*/'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:200:2: ( '/*' ( options {greedy=false; } : . )* '*/' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:200:4: '/*' ( options {greedy=false; } : . )* '*/'
 			{
 			match("/*"); 
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:9: ( options {greedy=false; } : . )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:200:9: ( options {greedy=false; } : . )*
 			loop16:
 			while (true) {
 				int alt16=2;
@@ -1659,7 +1882,7 @@ public class DroolsRuleLexer extends Lexer {
 
 				switch (alt16) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:192:37: .
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:200:37: .
 					{
 					matchAny(); 
 					}
@@ -1689,8 +1912,8 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = WS;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:195:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:195:9: ( ' ' | '\\t' | '\\r' | '\\n' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:5: ( ( ' ' | '\\t' | '\\r' | '\\n' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:9: ( ' ' | '\\t' | '\\r' | '\\n' )
 			{
 			if ( (input.LA(1) >= '\t' && input.LA(1) <= '\n')||input.LA(1)=='\r'||input.LA(1)==' ' ) {
 				input.consume();
@@ -1717,11 +1940,11 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = STRING;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:5: ( '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:8: '\"' ( ESC_SEQ |~ ( '\\\\' | '\"' ) )* '\"'
 			{
 			match('\"'); 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:12: ( ESC_SEQ |~ ( '\\\\' | '\"' ) )*
 			loop17:
 			while (true) {
 				int alt17=3;
@@ -1735,14 +1958,14 @@ public class DroolsRuleLexer extends Lexer {
 
 				switch (alt17) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:14: ESC_SEQ
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:14: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:203:24: ~ ( '\\\\' | '\"' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:24: ~ ( '\\\\' | '\"' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '!')||(input.LA(1) >= '#' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -1777,11 +2000,11 @@ public class DroolsRuleLexer extends Lexer {
 		try {
 			int _type = CHAR;
 			int _channel = DEFAULT_TOKEN_CHANNEL;
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:5: ( '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\'' )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:8: '\\'' ( ESC_SEQ |~ ( '\\'' | '\\\\' ) ) '\\''
 			{
 			match('\''); 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:13: ( ESC_SEQ |~ ( '\\'' | '\\\\' ) )
 			int alt18=2;
 			int LA18_0 = input.LA(1);
 			if ( (LA18_0=='\\') ) {
@@ -1799,14 +2022,14 @@ public class DroolsRuleLexer extends Lexer {
 
 			switch (alt18) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:15: ESC_SEQ
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:15: ESC_SEQ
 					{
 					mESC_SEQ(); 
 
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:206:25: ~ ( '\\'' | '\\\\' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:25: ~ ( '\\'' | '\\\\' )
 					{
 					if ( (input.LA(1) >= '\u0000' && input.LA(1) <= '&')||(input.LA(1) >= '(' && input.LA(1) <= '[')||(input.LA(1) >= ']' && input.LA(1) <= '\uFFFF') ) {
 						input.consume();
@@ -1836,8 +2059,8 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "EXPONENT"
 	public final void mEXPONENT() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:219:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:219:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
 			{
 			if ( input.LA(1)=='E'||input.LA(1)=='e' ) {
 				input.consume();
@@ -1847,7 +2070,7 @@ public class DroolsRuleLexer extends Lexer {
 				recover(mse);
 				throw mse;
 			}
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:22: ( '+' | '-' )?
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:219:22: ( '+' | '-' )?
 			int alt19=2;
 			int LA19_0 = input.LA(1);
 			if ( (LA19_0=='+'||LA19_0=='-') ) {
@@ -1870,7 +2093,7 @@ public class DroolsRuleLexer extends Lexer {
 
 			}
 
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:211:33: ( '0' .. '9' )+
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:219:33: ( '0' .. '9' )+
 			int cnt20=0;
 			loop20:
 			while (true) {
@@ -1915,7 +2138,7 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "HEX_DIGIT"
 	public final void mHEX_DIGIT() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:214:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:222:11: ( ( '0' .. '9' | 'a' .. 'f' | 'A' .. 'F' ) )
 			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:
 			{
 			if ( (input.LA(1) >= '0' && input.LA(1) <= '9')||(input.LA(1) >= 'A' && input.LA(1) <= 'F')||(input.LA(1) >= 'a' && input.LA(1) <= 'f') ) {
@@ -1938,7 +2161,7 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "ESC_SEQ"
 	public final void mESC_SEQ() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:218:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:226:5: ( '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' ) | UNICODE_ESC | OCTAL_ESC )
 			int alt21=3;
 			int LA21_0 = input.LA(1);
 			if ( (LA21_0=='\\') ) {
@@ -1993,7 +2216,7 @@ public class DroolsRuleLexer extends Lexer {
 
 			switch (alt21) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:218:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:226:9: '\\\\' ( 'b' | 't' | 'n' | 'f' | 'r' | '\\\"' | '\\'' | '\\\\' )
 					{
 					match('\\'); 
 					if ( input.LA(1)=='\"'||input.LA(1)=='\''||input.LA(1)=='\\'||input.LA(1)=='b'||input.LA(1)=='f'||input.LA(1)=='n'||input.LA(1)=='r'||input.LA(1)=='t' ) {
@@ -2007,14 +2230,14 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:219:9: UNICODE_ESC
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:227:9: UNICODE_ESC
 					{
 					mUNICODE_ESC(); 
 
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:220:9: OCTAL_ESC
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:228:9: OCTAL_ESC
 					{
 					mOCTAL_ESC(); 
 
@@ -2032,7 +2255,7 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "OCTAL_ESC"
 	public final void mOCTAL_ESC() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:225:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:233:5: ( '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) ( '0' .. '7' ) | '\\\\' ( '0' .. '7' ) )
 			int alt22=3;
 			int LA22_0 = input.LA(1);
 			if ( (LA22_0=='\\') ) {
@@ -2090,7 +2313,7 @@ public class DroolsRuleLexer extends Lexer {
 
 			switch (alt22) {
 				case 1 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:225:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:233:9: '\\\\' ( '0' .. '3' ) ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '3') ) {
@@ -2120,7 +2343,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 2 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:226:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:234:9: '\\\\' ( '0' .. '7' ) ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -2142,7 +2365,7 @@ public class DroolsRuleLexer extends Lexer {
 					}
 					break;
 				case 3 :
-					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:227:9: '\\\\' ( '0' .. '7' )
+					// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:235:9: '\\\\' ( '0' .. '7' )
 					{
 					match('\\'); 
 					if ( (input.LA(1) >= '0' && input.LA(1) <= '7') ) {
@@ -2167,8 +2390,8 @@ public class DroolsRuleLexer extends Lexer {
 	// $ANTLR start "UNICODE_ESC"
 	public final void mUNICODE_ESC() throws RecognitionException {
 		try {
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:232:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
-			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:232:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:240:5: ( '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT )
+			// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:240:9: '\\\\' 'u' HEX_DIGIT HEX_DIGIT HEX_DIGIT HEX_DIGIT
 			{
 			match('\\'); 
 			match('u'); 
@@ -2191,8 +2414,8 @@ public class DroolsRuleLexer extends Lexer {
 
 	@Override
 	public void mTokens() throws RecognitionException {
-		// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:8: ( DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | KEYWORD | SEMICOLON | COLON | SEPARATOR | OPERATOR | ID | BINDING | FQN | INT | FLOAT | SINGLELINE_COMMENT | MULTILINE_COMMENT | WS | STRING | CHAR )
-		int alt23=26;
+		// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:8: ( DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | SALIENCE | PRIMITIVE | KEYWORD | SEMICOLON | COLON | SEPARATOR | OPERATOR | ID | META | BINDING | FQN | INT | FLOAT | SINGLELINE_COMMENT | MULTILINE_COMMENT | WS | STRING | CHAR )
+		int alt23=28;
 		alt23 = dfa23.predict(input);
 		switch (alt23) {
 			case 1 :
@@ -2266,112 +2489,126 @@ public class DroolsRuleLexer extends Lexer {
 				}
 				break;
 			case 11 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:75: PRIMITIVE
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:75: SALIENCE
+				{
+				mSALIENCE(); 
+
+				}
+				break;
+			case 12 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:84: PRIMITIVE
 				{
 				mPRIMITIVE(); 
 
 				}
 				break;
-			case 12 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:85: KEYWORD
+			case 13 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:94: KEYWORD
 				{
 				mKEYWORD(); 
 
 				}
 				break;
-			case 13 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:93: SEMICOLON
+			case 14 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:102: SEMICOLON
 				{
 				mSEMICOLON(); 
 
 				}
 				break;
-			case 14 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:103: COLON
+			case 15 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:112: COLON
 				{
 				mCOLON(); 
 
 				}
 				break;
-			case 15 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:109: SEPARATOR
+			case 16 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:118: SEPARATOR
 				{
 				mSEPARATOR(); 
 
 				}
 				break;
-			case 16 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:119: OPERATOR
+			case 17 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:128: OPERATOR
 				{
 				mOPERATOR(); 
 
 				}
 				break;
-			case 17 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:128: ID
+			case 18 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:137: ID
 				{
 				mID(); 
 
 				}
 				break;
-			case 18 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:131: BINDING
+			case 19 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:140: META
+				{
+				mMETA(); 
+
+				}
+				break;
+			case 20 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:145: BINDING
 				{
 				mBINDING(); 
 
 				}
 				break;
-			case 19 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:139: FQN
+			case 21 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:153: FQN
 				{
 				mFQN(); 
 
 				}
 				break;
-			case 20 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:143: INT
+			case 22 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:157: INT
 				{
 				mINT(); 
 
 				}
 				break;
-			case 21 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:147: FLOAT
+			case 23 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:161: FLOAT
 				{
 				mFLOAT(); 
 
 				}
 				break;
-			case 22 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:153: SINGLELINE_COMMENT
+			case 24 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:167: SINGLELINE_COMMENT
 				{
 				mSINGLELINE_COMMENT(); 
 
 				}
 				break;
-			case 23 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:172: MULTILINE_COMMENT
+			case 25 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:186: MULTILINE_COMMENT
 				{
 				mMULTILINE_COMMENT(); 
 
 				}
 				break;
-			case 24 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:190: WS
+			case 26 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:204: WS
 				{
 				mWS(); 
 
 				}
 				break;
-			case 25 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:193: STRING
+			case 27 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:207: STRING
 				{
 				mSTRING(); 
 
 				}
 				break;
-			case 26 :
-				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:200: CHAR
+			case 28 :
+				// C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g:1:214: CHAR
 				{
 				mCHAR(); 
 
@@ -2435,287 +2672,337 @@ public class DroolsRuleLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "181:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
+			return "189:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );";
 		}
 	}
 
 	static final String DFA23_eotS =
-		"\1\uffff\21\42\2\uffff\1\32\1\uffff\1\25\1\42\1\uffff\1\102\4\uffff\2"+
-		"\42\1\106\1\42\2\uffff\6\42\1\106\16\42\1\106\3\42\6\uffff\3\42\1\uffff"+
-		"\1\142\4\42\1\147\13\42\1\106\2\42\3\106\4\42\1\uffff\1\42\1\106\2\42"+
-		"\1\uffff\1\42\1\175\1\42\1\177\1\u0080\1\42\1\147\2\42\1\147\1\42\1\147"+
-		"\11\42\1\uffff\1\42\2\uffff\1\106\1\42\2\147\4\42\1\147\1\42\1\u0095\1"+
-		"\u0096\1\42\1\106\3\42\1\u009b\1\u009c\1\u009d\2\uffff\1\u009e\1\147\1"+
-		"\42\1\106\4\uffff\1\106";
+		"\1\uffff\21\43\2\uffff\1\33\1\uffff\1\25\1\43\2\uffff\1\110\4\uffff\2"+
+		"\43\1\114\1\43\2\uffff\6\43\1\114\23\43\1\114\3\43\6\uffff\3\43\1\uffff"+
+		"\1\155\4\43\1\162\4\43\1\114\11\43\1\114\4\43\3\114\4\43\1\uffff\1\43"+
+		"\1\114\2\43\1\uffff\1\43\1\u008c\1\43\1\u008e\1\u008f\3\43\1\162\2\43"+
+		"\1\162\2\43\1\162\12\43\1\uffff\1\43\2\uffff\1\114\1\43\1\162\1\43\1\114"+
+		"\1\162\3\43\1\114\3\43\1\162\1\43\1\u00ac\1\u00ad\1\43\1\114\6\43\1\u00b5"+
+		"\1\u00b6\1\u00b7\2\uffff\1\u00b8\1\43\1\162\1\114\2\43\1\114\4\uffff\1"+
+		"\u00bc\2\114\1\uffff";
 	static final String DFA23_eofS =
-		"\u00a0\uffff";
+		"\u00bd\uffff";
 	static final String DFA23_minS =
-		"\1\11\21\56\2\uffff\1\60\1\uffff\1\52\1\56\1\uffff\1\56\4\uffff\4\56\2"+
-		"\uffff\31\56\6\uffff\3\56\1\uffff\33\56\1\uffff\4\56\1\uffff\25\56\1\uffff"+
-		"\1\56\2\uffff\24\56\2\uffff\4\56\4\uffff\1\56";
+		"\1\11\21\56\2\uffff\1\60\1\uffff\1\52\1\56\2\uffff\1\56\4\uffff\4\56\2"+
+		"\uffff\36\56\6\uffff\3\56\1\uffff\40\56\1\uffff\4\56\1\uffff\31\56\1\uffff"+
+		"\1\56\2\uffff\34\56\2\uffff\7\56\4\uffff\3\56\1\uffff";
 	static final String DFA23_maxS =
-		"\1\174\21\172\2\uffff\1\71\1\uffff\1\57\1\172\1\uffff\1\145\4\uffff\4"+
-		"\172\2\uffff\31\172\6\uffff\3\172\1\uffff\33\172\1\uffff\4\172\1\uffff"+
-		"\25\172\1\uffff\1\172\2\uffff\24\172\2\uffff\4\172\4\uffff\1\172";
+		"\1\174\21\172\2\uffff\1\71\1\uffff\1\57\1\172\2\uffff\1\145\4\uffff\4"+
+		"\172\2\uffff\36\172\6\uffff\3\172\1\uffff\40\172\1\uffff\4\172\1\uffff"+
+		"\31\172\1\uffff\1\172\2\uffff\34\172\2\uffff\7\172\4\uffff\3\172\1\uffff";
 	static final String DFA23_acceptS =
-		"\22\uffff\1\15\1\16\1\uffff\1\20\2\uffff\1\22\1\uffff\1\17\1\30\1\31\1"+
-		"\32\4\uffff\1\21\1\23\31\uffff\1\15\1\16\1\25\1\26\1\27\1\24\3\uffff\1"+
-		"\14\33\uffff\1\3\4\uffff\1\13\25\uffff\1\10\1\uffff\1\11\1\12\24\uffff"+
-		"\1\5\1\6\4\uffff\1\1\1\2\1\4\1\7\1\uffff";
+		"\22\uffff\1\16\1\17\1\uffff\1\21\2\uffff\1\23\1\24\1\uffff\1\20\1\32\1"+
+		"\33\1\34\4\uffff\1\22\1\25\36\uffff\1\16\1\17\1\27\1\30\1\31\1\26\3\uffff"+
+		"\1\15\40\uffff\1\3\4\uffff\1\14\31\uffff\1\10\1\uffff\1\11\1\12\34\uffff"+
+		"\1\5\1\6\7\uffff\1\1\1\2\1\4\1\7\3\uffff\1\13";
 	static final String DFA23_specialS =
-		"\u00a0\uffff}>";
+		"\u00bd\uffff}>";
 	static final String[] DFA23_transitionS = {
-			"\2\33\2\uffff\1\33\22\uffff\1\33\1\25\1\34\1\uffff\1\30\2\25\1\35\2\32"+
-			"\2\25\1\32\1\25\1\24\1\26\12\31\1\23\1\22\3\25\2\uffff\32\27\1\32\1\uffff"+
-			"\1\32\1\uffff\1\27\1\uffff\1\16\1\11\1\15\1\1\1\2\1\14\1\3\1\27\1\4\2"+
-			"\27\1\13\1\21\1\20\1\17\1\5\1\27\1\6\1\12\1\7\2\27\1\10\3\27\1\uffff"+
-			"\1\25",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\36\3\41"+
-			"\1\37\5\41\1\40\13\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\46\1"+
-			"\41\1\44\11\41\1\45\2\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\47\16"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\5\41\1\52\6\41"+
-			"\1\50\1\51\14\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\53\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\55\17"+
-			"\41\1\54\5\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\7\41\1\56\22"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\7\41\1\57\22"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\16\41\1\61\11"+
-			"\41\1\60\1\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\7\41\1\62\22"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\16\41\1\63\13"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\64\2"+
-			"\41\1\65\13\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\7\41\1\66\6\41"+
-			"\1\67\13\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\70\14"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\21\41\1\71\10"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\73\11"+
-			"\41\1\72\13\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\74\31\41",
+			"\2\34\2\uffff\1\34\22\uffff\1\34\1\25\1\35\1\uffff\1\31\2\25\1\36\2\33"+
+			"\2\25\1\33\1\25\1\24\1\26\12\32\1\23\1\22\3\25\1\uffff\1\30\32\27\1\33"+
+			"\1\uffff\1\33\1\uffff\1\27\1\uffff\1\16\1\12\1\15\1\1\1\2\1\14\1\3\1"+
+			"\27\1\4\2\27\1\13\1\21\1\20\1\17\1\5\1\27\1\6\1\11\1\7\2\27\1\10\3\27"+
+			"\1\uffff\1\25",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\37\3\42"+
+			"\1\40\5\42\1\41\13\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\47\1"+
+			"\42\1\45\11\42\1\46\2\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\50\16"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\5\42\1\53\6\42"+
+			"\1\51\1\52\14\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\54\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\56\17"+
+			"\42\1\55\5\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\7\42\1\57\11"+
+			"\42\1\60\10\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\7\42\1\61\22"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\62\6\42\1\63"+
+			"\22\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\16\42\1\65\2"+
+			"\42\1\66\6\42\1\64\1\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\16\42\1\67\13"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\10\42\1\72\2"+
+			"\42\1\70\2\42\1\71\13\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\75\6\42\1\73"+
+			"\6\42\1\74\13\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\76\14"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\21\42\1\77\10"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\101\11"+
+			"\42\1\100\13\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\102\31\42",
 			"",
 			"",
-			"\12\77",
+			"\12\105",
 			"",
-			"\1\101\4\uffff\1\100",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"",
-			"\1\77\1\uffff\12\31\13\uffff\1\77\37\uffff\1\77",
+			"\1\107\4\uffff\1\106",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
 			"",
 			"",
-			"",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\2\41\1\103\27"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\104\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\24\41\1\105\5"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\3\41\1\107\26"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\110\6"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\22\41\1\111\7"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\16\41\1\112\13"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\17\41\1\113\12"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\114\6"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\2\41\1\115\27"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\116\16"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\117\6"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\120\25"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\121\3"+
-			"\41\1\122\21\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\123\6"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\16\41\1\124\13"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\16\41\1\125\13"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\126\14"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\16\41\1\127\13"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\21\41\1\130\10"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\131\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\132\14"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\3\41\1\133\26"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\134\6"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\26\41\1\135\3"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\136\6"+
-			"\41",
+			"\1\105\1\uffff\12\32\13\uffff\1\105\37\uffff\1\105",
 			"",
 			"",
 			"",
 			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\2\42\1\111\27"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\112\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\24\42\1\113\5"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
 			"",
 			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\137\16"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\140\16"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\41\1\141\30"+
-			"\41",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\143\25"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\144\25"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\41\1\145\30"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\16\41\1\146\13"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\12\41\1\150\17"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\151\25"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\24\41\1\152\5"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\153\14"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\154\14"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\155\16"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\156\25"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\157\16"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\21\41\1\160\10"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\6\41\1\161\23"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\162\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\21\41\1\163\10"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\164\6"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\2\41\1\165\27"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\166\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\167\25"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\170\16"+
-			"\41",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\171\14"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\172\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\21\41\1\173\10"+
-			"\41",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\174\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\21\41\1\176\10"+
-			"\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\u0081"+
-			"\25\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\u0082"+
-			"\25\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\u0083"+
-			"\6\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\u0084"+
-			"\6\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\u0085\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\7\41\1\u0086"+
-			"\22\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\21\41\1\u0087"+
-			"\10\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\2\41\1\u0088"+
-			"\27\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\u0089"+
-			"\25\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\3\41\1\u008a"+
-			"\26\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\13\41\1\u008b"+
-			"\16\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\u008c"+
-			"\6\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\6\41\1\u008d"+
-			"\23\41",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\u008e"+
-			"\14\41",
-			"",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\1\u008f\31\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\10\41\1\u0090"+
-			"\21\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\u0091"+
-			"\25\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\u0092"+
-			"\25\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\23\41\1\u0093"+
-			"\6\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\22\41\1\u0094"+
-			"\7\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\4\41\1\u0097"+
-			"\25\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\u0098"+
-			"\14\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\15\41\1\u0099"+
-			"\14\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\22\41\1\u009a"+
-			"\7\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"",
-			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\22\41\1\u009f"+
-			"\7\41",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\3\42\1\115\26"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\116\6"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\22\42\1\117\7"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\16\42\1\120\13"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\17\42\1\121\12"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\122\6"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\2\42\1\123\27"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\124\16"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\125\6"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\126\25"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\30\42\1\127\1"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\130\3"+
+			"\42\1\131\21\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\132\16"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\16\42\1\133\13"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\134\6"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\16\42\1\135\13"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\136\25"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\137\14"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\16\42\1\140\13"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\21\42\1\141\10"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\142\14"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\143\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\144\14"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\145\6"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\3\42\1\146\26"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\147\6"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\26\42\1\150\3"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\151\6"+
+			"\42",
 			"",
 			"",
 			"",
 			"",
-			"\1\43\1\uffff\12\41\7\uffff\32\41\4\uffff\1\41\1\uffff\32\41"
+			"",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\152\16"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\153\16"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\42\1\154\30"+
+			"\42",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\156\25"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\157\25"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\42\1\160\30"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\16\42\1\161\13"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\12\42\1\163\17"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\164\25"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\24\42\1\165\5"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\166\14"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\167\14"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\170\16"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\10\42\1\171\21"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\21\42\1\172\10"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\173\25"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\174\16"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\175\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\6\42\1\176\23"+
+			"\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\177\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\u0080\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\21\42\1\u0081"+
+			"\10\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\u0082"+
+			"\6\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\2\42\1\u0083"+
+			"\27\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\2\42\1\u0084"+
+			"\27\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\u0085\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u0086"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\u0087"+
+			"\16\42",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\u0088"+
+			"\14\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\u0089\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\21\42\1\u008a"+
+			"\10\42",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\u008b\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\21\42\1\u008d"+
+			"\10\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u0090"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u0091"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\u0092"+
+			"\6\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u0093"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\12\42\1\u0094"+
+			"\17\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\u0095"+
+			"\6\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\u0096"+
+			"\16\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\u0097\7\42"+
+			"\1\u0098\21\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\7\42\1\u0099"+
+			"\22\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\7\42\1\u009a"+
+			"\22\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\21\42\1\u009b"+
+			"\10\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\2\42\1\u009c"+
+			"\27\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u009d"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\3\42\1\u009e"+
+			"\26\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\u009f"+
+			"\16\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\u00a0"+
+			"\6\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\6\42\1\u00a1"+
+			"\23\42",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\u00a2"+
+			"\14\42",
+			"",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\u00a3"+
+			"\14\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\1\u00a4\31\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\13\42\1\u00a5"+
+			"\16\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\10\42\1\u00a6"+
+			"\21\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\u00a7"+
+			"\14\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u00a8"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u00a9"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\23\42\1\u00aa"+
+			"\6\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\22\42\1\u00ab"+
+			"\7\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u00ae"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\2\42\1\u00af"+
+			"\27\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\u00b0"+
+			"\14\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\30\42\1\u00b1"+
+			"\1\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\15\42\1\u00b2"+
+			"\14\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\24\42\1\u00b3"+
+			"\5\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\22\42\1\u00b4"+
+			"\7\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u00b9"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\22\42\1\u00ba"+
+			"\7\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\4\42\1\u00bb"+
+			"\25\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"",
+			"",
+			"",
+			"",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			"\1\44\1\uffff\12\42\7\uffff\32\42\4\uffff\1\42\1\uffff\32\42",
+			""
 	};
 
 	static final short[] DFA23_eot = DFA.unpackEncodedString(DFA23_eotS);
@@ -2749,7 +3036,7 @@ public class DroolsRuleLexer extends Lexer {
 		}
 		@Override
 		public String getDescription() {
-			return "1:1: Tokens : ( DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | PRIMITIVE | KEYWORD | SEMICOLON | COLON | SEPARATOR | OPERATOR | ID | BINDING | FQN | INT | FLOAT | SINGLELINE_COMMENT | MULTILINE_COMMENT | WS | STRING | CHAR );";
+			return "1:1: Tokens : ( DECLARE | DIALECT | END | EXTENDS | GLOBAL | IMPORT | PACKAGE | RULE | THEN | WHEN | SALIENCE | PRIMITIVE | KEYWORD | SEMICOLON | COLON | SEPARATOR | OPERATOR | ID | META | BINDING | FQN | INT | FLOAT | SINGLELINE_COMMENT | MULTILINE_COMMENT | WS | STRING | CHAR );";
 		}
 	}
 

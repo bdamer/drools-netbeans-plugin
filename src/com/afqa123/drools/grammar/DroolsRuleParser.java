@@ -1,4 +1,4 @@
-// $ANTLR 3.5.1 C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g 2013-12-07 19:01:43
+// $ANTLR 3.5.1 C:\\Development\\NetBeansProjects\\drools-netbeans-plugin\\src\\com\\afqa123\\drools\\grammar\\DroolsRule.g 2014-06-09 12:50:13
 
 package com.afqa123.drools.grammar;
 
@@ -18,9 +18,10 @@ public class DroolsRuleParser extends Parser {
 	public static final String[] tokenNames = new String[] {
 		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "BINDING", "CHAR", "COLON", "DECLARE", 
 		"DIALECT", "END", "ESC_SEQ", "EXPONENT", "EXTENDS", "FLOAT", "FQN", "GLOBAL", 
-		"HEX_DIGIT", "ID", "IMPORT", "INT", "KEYWORD", "MULTILINE_COMMENT", "OCTAL_ESC", 
-		"OPERATOR", "PACKAGE", "PRIMITIVE", "RULE", "SEMICOLON", "SEPARATOR", 
-		"SINGLELINE_COMMENT", "STRING", "THEN", "UNICODE_ESC", "WHEN", "WS"
+		"HEX_DIGIT", "ID", "IMPORT", "INT", "KEYWORD", "META", "MULTILINE_COMMENT", 
+		"OCTAL_ESC", "OPERATOR", "PACKAGE", "PRIMITIVE", "RULE", "SALIENCE", "SEMICOLON", 
+		"SEPARATOR", "SINGLELINE_COMMENT", "STRING", "THEN", "UNICODE_ESC", "WHEN", 
+		"WS"
 	};
 	public static final int EOF=-1;
 	public static final int BINDING=4;
@@ -40,20 +41,22 @@ public class DroolsRuleParser extends Parser {
 	public static final int IMPORT=18;
 	public static final int INT=19;
 	public static final int KEYWORD=20;
-	public static final int MULTILINE_COMMENT=21;
-	public static final int OCTAL_ESC=22;
-	public static final int OPERATOR=23;
-	public static final int PACKAGE=24;
-	public static final int PRIMITIVE=25;
-	public static final int RULE=26;
-	public static final int SEMICOLON=27;
-	public static final int SEPARATOR=28;
-	public static final int SINGLELINE_COMMENT=29;
-	public static final int STRING=30;
-	public static final int THEN=31;
-	public static final int UNICODE_ESC=32;
-	public static final int WHEN=33;
-	public static final int WS=34;
+	public static final int META=21;
+	public static final int MULTILINE_COMMENT=22;
+	public static final int OCTAL_ESC=23;
+	public static final int OPERATOR=24;
+	public static final int PACKAGE=25;
+	public static final int PRIMITIVE=26;
+	public static final int RULE=27;
+	public static final int SALIENCE=28;
+	public static final int SEMICOLON=29;
+	public static final int SEPARATOR=30;
+	public static final int SINGLELINE_COMMENT=31;
+	public static final int STRING=32;
+	public static final int THEN=33;
+	public static final int UNICODE_ESC=34;
+	public static final int WHEN=35;
+	public static final int WS=36;
 
 	// delegates
 	public Parser[] getDelegates() {
@@ -1647,14 +1650,14 @@ public class DroolsRuleParser extends Parser {
 	static final String DFA1_minS =
 		"\2\7\2\uffff";
 	static final String DFA1_maxS =
-		"\2\42\2\uffff";
+		"\2\44\2\uffff";
 	static final String DFA1_acceptS =
 		"\2\uffff\1\2\1\1";
 	static final String DFA1_specialS =
 		"\4\uffff}>";
 	static final String[] DFA1_transitionS = {
-			"\2\3\6\uffff\1\3\2\uffff\1\3\5\uffff\1\3\1\uffff\1\3\7\uffff\1\1",
-			"\2\3\6\uffff\1\3\2\uffff\1\3\5\uffff\1\3\1\uffff\1\3\7\uffff\1\1",
+			"\2\3\6\uffff\1\3\2\uffff\1\3\6\uffff\1\3\1\uffff\1\3\10\uffff\1\1",
+			"\2\3\6\uffff\1\3\2\uffff\1\3\6\uffff\1\3\1\uffff\1\3\10\uffff\1\1",
 			"",
 			""
 	};
@@ -1701,14 +1704,14 @@ public class DroolsRuleParser extends Parser {
 	static final String DFA16_minS =
 		"\1\21\1\11\2\uffff";
 	static final String DFA16_maxS =
-		"\2\42\2\uffff";
+		"\2\44\2\uffff";
 	static final String DFA16_acceptS =
 		"\2\uffff\1\1\1\2";
 	static final String DFA16_specialS =
 		"\4\uffff}>";
 	static final String[] DFA16_transitionS = {
-			"\1\2\20\uffff\1\1",
-			"\1\3\7\uffff\1\2\20\uffff\1\1",
+			"\1\2\22\uffff\1\1",
+			"\1\3\7\uffff\1\2\22\uffff\1\1",
 			"",
 			""
 	};
@@ -1748,55 +1751,55 @@ public class DroolsRuleParser extends Parser {
 		}
 	}
 
-	public static final BitSet FOLLOW_declaration_in_program66 = new BitSet(new long[]{0x0000000405048182L});
-	public static final BitSet FOLLOW_WS_in_program69 = new BitSet(new long[]{0x0000000400000002L});
-	public static final BitSet FOLLOW_WS_in_declaration82 = new BitSet(new long[]{0x0000000405048180L});
-	public static final BitSet FOLLOW_packageDeclaration_in_declaration90 = new BitSet(new long[]{0x0000000408000002L});
-	public static final BitSet FOLLOW_importDeclaration_in_declaration94 = new BitSet(new long[]{0x0000000408000002L});
-	public static final BitSet FOLLOW_globalDeclaration_in_declaration98 = new BitSet(new long[]{0x0000000408000002L});
-	public static final BitSet FOLLOW_dialectDeclaration_in_declaration102 = new BitSet(new long[]{0x0000000408000002L});
-	public static final BitSet FOLLOW_typeDeclaration_in_declaration106 = new BitSet(new long[]{0x0000000408000002L});
-	public static final BitSet FOLLOW_ruleDeclaration_in_declaration110 = new BitSet(new long[]{0x0000000408000002L});
-	public static final BitSet FOLLOW_WS_in_declaration116 = new BitSet(new long[]{0x0000000408000002L});
+	public static final BitSet FOLLOW_declaration_in_program66 = new BitSet(new long[]{0x000000100A048182L});
+	public static final BitSet FOLLOW_WS_in_program69 = new BitSet(new long[]{0x0000001000000002L});
+	public static final BitSet FOLLOW_WS_in_declaration82 = new BitSet(new long[]{0x000000100A048180L});
+	public static final BitSet FOLLOW_packageDeclaration_in_declaration90 = new BitSet(new long[]{0x0000001020000002L});
+	public static final BitSet FOLLOW_importDeclaration_in_declaration94 = new BitSet(new long[]{0x0000001020000002L});
+	public static final BitSet FOLLOW_globalDeclaration_in_declaration98 = new BitSet(new long[]{0x0000001020000002L});
+	public static final BitSet FOLLOW_dialectDeclaration_in_declaration102 = new BitSet(new long[]{0x0000001020000002L});
+	public static final BitSet FOLLOW_typeDeclaration_in_declaration106 = new BitSet(new long[]{0x0000001020000002L});
+	public static final BitSet FOLLOW_ruleDeclaration_in_declaration110 = new BitSet(new long[]{0x0000001020000002L});
+	public static final BitSet FOLLOW_WS_in_declaration116 = new BitSet(new long[]{0x0000001020000002L});
 	public static final BitSet FOLLOW_SEMICOLON_in_declaration120 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_PACKAGE_in_packageDeclaration133 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_packageDeclaration135 = new BitSet(new long[]{0x0000000400004000L});
+	public static final BitSet FOLLOW_PACKAGE_in_packageDeclaration133 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_packageDeclaration135 = new BitSet(new long[]{0x0000001000004000L});
 	public static final BitSet FOLLOW_FQN_in_packageDeclaration139 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DIALECT_in_dialectDeclaration152 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_dialectDeclaration154 = new BitSet(new long[]{0x0000000440000000L});
+	public static final BitSet FOLLOW_DIALECT_in_dialectDeclaration152 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_dialectDeclaration154 = new BitSet(new long[]{0x0000001100000000L});
 	public static final BitSet FOLLOW_STRING_in_dialectDeclaration158 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_IMPORT_in_importDeclaration170 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_importDeclaration172 = new BitSet(new long[]{0x0000000400004000L});
+	public static final BitSet FOLLOW_IMPORT_in_importDeclaration170 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_importDeclaration172 = new BitSet(new long[]{0x0000001000004000L});
 	public static final BitSet FOLLOW_FQN_in_importDeclaration176 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_GLOBAL_in_globalDeclaration188 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_globalDeclaration190 = new BitSet(new long[]{0x0000000400004000L});
-	public static final BitSet FOLLOW_FQN_in_globalDeclaration193 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_globalDeclaration195 = new BitSet(new long[]{0x0000000400020000L});
+	public static final BitSet FOLLOW_GLOBAL_in_globalDeclaration188 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_globalDeclaration190 = new BitSet(new long[]{0x0000001000004000L});
+	public static final BitSet FOLLOW_FQN_in_globalDeclaration193 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_globalDeclaration195 = new BitSet(new long[]{0x0000001000020000L});
 	public static final BitSet FOLLOW_ID_in_globalDeclaration198 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_DECLARE_in_typeDeclaration219 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_typeDeclaration221 = new BitSet(new long[]{0x0000000400020000L});
-	public static final BitSet FOLLOW_ID_in_typeDeclaration225 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_typeDeclaration227 = new BitSet(new long[]{0x0000000400021000L});
+	public static final BitSet FOLLOW_DECLARE_in_typeDeclaration219 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_typeDeclaration221 = new BitSet(new long[]{0x0000001000020000L});
+	public static final BitSet FOLLOW_ID_in_typeDeclaration225 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_typeDeclaration227 = new BitSet(new long[]{0x0000001000021000L});
 	public static final BitSet FOLLOW_EXTENDS_in_typeDeclaration232 = new BitSet(new long[]{0x0000000000004000L});
-	public static final BitSet FOLLOW_FQN_in_typeDeclaration234 = new BitSet(new long[]{0x0000000400020000L});
-	public static final BitSet FOLLOW_WS_in_typeDeclaration239 = new BitSet(new long[]{0x0000000400020000L});
-	public static final BitSet FOLLOW_memberDeclaration_in_typeDeclaration242 = new BitSet(new long[]{0x0000000400020000L});
-	public static final BitSet FOLLOW_WS_in_typeDeclaration246 = new BitSet(new long[]{0x0000000400000200L});
+	public static final BitSet FOLLOW_FQN_in_typeDeclaration234 = new BitSet(new long[]{0x0000001000020000L});
+	public static final BitSet FOLLOW_WS_in_typeDeclaration239 = new BitSet(new long[]{0x0000001000020000L});
+	public static final BitSet FOLLOW_memberDeclaration_in_typeDeclaration242 = new BitSet(new long[]{0x0000001000020000L});
+	public static final BitSet FOLLOW_WS_in_typeDeclaration246 = new BitSet(new long[]{0x0000001000000200L});
 	public static final BitSet FOLLOW_END_in_typeDeclaration249 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_ID_in_memberDeclaration261 = new BitSet(new long[]{0x0000000400000040L});
-	public static final BitSet FOLLOW_WS_in_memberDeclaration263 = new BitSet(new long[]{0x0000000400000040L});
-	public static final BitSet FOLLOW_COLON_in_memberDeclaration267 = new BitSet(new long[]{0x0000000402004000L});
-	public static final BitSet FOLLOW_WS_in_memberDeclaration269 = new BitSet(new long[]{0x0000000402004000L});
+	public static final BitSet FOLLOW_ID_in_memberDeclaration261 = new BitSet(new long[]{0x0000001000000040L});
+	public static final BitSet FOLLOW_WS_in_memberDeclaration263 = new BitSet(new long[]{0x0000001000000040L});
+	public static final BitSet FOLLOW_COLON_in_memberDeclaration267 = new BitSet(new long[]{0x0000001004004000L});
+	public static final BitSet FOLLOW_WS_in_memberDeclaration269 = new BitSet(new long[]{0x0000001004004000L});
 	public static final BitSet FOLLOW_set_in_memberDeclaration273 = new BitSet(new long[]{0x0000000000000002L});
-	public static final BitSet FOLLOW_RULE_in_ruleDeclaration290 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_ruleDeclaration292 = new BitSet(new long[]{0x0000000640000000L});
-	public static final BitSet FOLLOW_STRING_in_ruleDeclaration297 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_ruleDeclaration299 = new BitSet(new long[]{0x0000000600000000L});
-	public static final BitSet FOLLOW_WHEN_in_ruleDeclaration305 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_ruleDeclaration307 = new BitSet(new long[]{0x0000000480000000L});
-	public static final BitSet FOLLOW_ruleLHS_in_ruleDeclaration311 = new BitSet(new long[]{0x0000000080000000L});
-	public static final BitSet FOLLOW_THEN_in_ruleDeclaration313 = new BitSet(new long[]{0x0000000400000000L});
-	public static final BitSet FOLLOW_WS_in_ruleDeclaration315 = new BitSet(new long[]{0x0000000400000200L});
+	public static final BitSet FOLLOW_RULE_in_ruleDeclaration290 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_ruleDeclaration292 = new BitSet(new long[]{0x0000001900000000L});
+	public static final BitSet FOLLOW_STRING_in_ruleDeclaration297 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_ruleDeclaration299 = new BitSet(new long[]{0x0000001800000000L});
+	public static final BitSet FOLLOW_WHEN_in_ruleDeclaration305 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_ruleDeclaration307 = new BitSet(new long[]{0x0000001200000000L});
+	public static final BitSet FOLLOW_ruleLHS_in_ruleDeclaration311 = new BitSet(new long[]{0x0000000200000000L});
+	public static final BitSet FOLLOW_THEN_in_ruleDeclaration313 = new BitSet(new long[]{0x0000001000000000L});
+	public static final BitSet FOLLOW_WS_in_ruleDeclaration315 = new BitSet(new long[]{0x0000001000000200L});
 	public static final BitSet FOLLOW_ruleRHS_in_ruleDeclaration319 = new BitSet(new long[]{0x0000000000000200L});
 	public static final BitSet FOLLOW_END_in_ruleDeclaration321 = new BitSet(new long[]{0x0000000000000002L});
 	public static final BitSet FOLLOW_WS_in_synpred9_DroolsRule116 = new BitSet(new long[]{0x0000000000000002L});
